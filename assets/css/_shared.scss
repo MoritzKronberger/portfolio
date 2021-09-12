@@ -1,0 +1,76 @@
+$offWhite: #FBFBFB;
+$offBlack: #222222;
+
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+// simplified efficient font stack by:
+// https://gist.github.com/fabricelejeune/bcdd3d4725d4e4cea672
+$main: (
+    huge: (
+        family: 'Atkinson Hyperlegible',
+        weight: 700,
+        size: 63px
+    ),
+    big: (
+        family: 'Atkinson Hyperlegible',
+        weight: 400,
+        size: 31px
+    ),
+    regular: (
+        family: 'Atkinson Hyperlegible',
+        weight: 400,
+        size: 16px
+    ),
+    small: (
+        family: 'Atkinson Hyperlegible',
+        weight: 400,
+        size: 11px
+    ),
+    tiny: (
+        family: 'Atkinson Hyperlegible',
+        weight: 400,
+        size: 8px
+    )
+);
+
+$code: (
+    huge: (
+        family: 'Roboto Mono',
+        weight: 700,
+        size: 56px
+    ),
+    big: (
+        family: 'Roboto Mono',
+        weight: 700,
+        size: 27.5px
+    ),
+    regular: (
+        family: 'Roboto Mono',
+        weight: 400,
+        size: 14.3px
+    ),
+    small: (
+        family: 'Roboto Mono',
+        weight: 400,
+        size: 9.8px
+    ),
+    tiny: (
+        family: 'Roboto Mono',
+        weight: 400,
+        size: 7.2px
+    )
+);
+
+@mixin font($font-stack, $variant, $properties: family weight size) {
+    $font-properties: map-get($font-stack, $variant);
+
+    @if $font-properties {
+        @each $property, $values in $font-properties {
+            @if contains($properties, $property) {
+                font-#{$property}: map-get($font-properties, $property);
+            }
+        }
+    }
+}
