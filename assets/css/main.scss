@@ -1,0 +1,23 @@
+@import '@/assets/css/_shared';
+
+:root {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $offWhite;
+    color: $offBlack;
+    @include font($main, regular);
+}
+
+.bodyDiv {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}

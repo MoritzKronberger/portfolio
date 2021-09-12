@@ -1,9 +1,9 @@
 <template>
   <main>
       <article>
-          <h2>Moritz Kronberger</h2>
-          <p>Hi, I'm a 22 year old Interactive Media Bachelor's Student at the University of Applied Sciences in Augsburg.</p>
-          <p>I love to code and create interesting and appealing interactions with digital media.</p>
+        <h2>Moritz Kronberger</h2>
+        <p>Hi, I'm a 22 year old Interactive Media Bachelor's Student at the University of Applied Sciences in Augsburg.</p>
+        <p>I love to code and create interesting and appealing interactions with digital media.</p>
       </article>
   </main>
 </template>
@@ -14,6 +14,23 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+  @import '@/assets/css/_shared';
 
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  article {
+    flex-basis: 27%;
+  }
+
+  h2 {
+    @include font($code, big);
+    margin-bottom: 1.5rem;
+  }
 </style>

@@ -11,27 +11,27 @@ $main: (
     huge: (
         family: 'Atkinson Hyperlegible',
         weight: 700,
-        size: 63px
+        size: 3.9375rem
     ),
     big: (
         family: 'Atkinson Hyperlegible',
         weight: 400,
-        size: 31px
+        size: 1.9375rem
     ),
     regular: (
         family: 'Atkinson Hyperlegible',
         weight: 400,
-        size: 16px
+        size: 1rem
     ),
     small: (
         family: 'Atkinson Hyperlegible',
         weight: 400,
-        size: 11px
+        size: .6875rem
     ),
     tiny: (
         family: 'Atkinson Hyperlegible',
         weight: 400,
-        size: 8px
+        size: .5rem
     )
 );
 
@@ -39,27 +39,27 @@ $code: (
     huge: (
         family: 'Roboto Mono',
         weight: 700,
-        size: 56px
+        size: 3.5rem
     ),
     big: (
         family: 'Roboto Mono',
         weight: 700,
-        size: 27.5px
+        size: 1.71875rem
     ),
     regular: (
         family: 'Roboto Mono',
         weight: 400,
-        size: 14.3px
+        size: .89375rem
     ),
     small: (
         family: 'Roboto Mono',
         weight: 400,
-        size: 9.8px
+        size: .6125rem
     ),
     tiny: (
         family: 'Roboto Mono',
         weight: 400,
-        size: 7.2px
+        size: .45
     )
 );
 
