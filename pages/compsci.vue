@@ -1,12 +1,21 @@
 <template>
   <main>
-      <p>CompSci projects go here.</p>
+      <PostList :category="category"/>
   </main>
 </template>
 
 <script>
+import PostList from '../components/PostList.vue'
 export default {
   layout: 'project_showcase',
+  components: {
+    PostList
+  },
+  data(){
+    return {
+      category: 'compsci'
+    }
+  }
 }
 </script>
 
