@@ -1,11 +1,7 @@
 <template>
   <main>
-    <div class="linkContainer">
-      <NuxtLink to="/design">Design</NuxtLink>
-    </div>
-    <div class="linkContainer">
-      <NuxtLink to="/compsci">CompSci</NuxtLink>
-    </div>
+    <NuxtLink to="/design" id="firstLink">Design</NuxtLink>
+    <NuxtLink to="/compsci">CompSci</NuxtLink>
   </main>
 </template>
 
@@ -20,37 +16,30 @@ export default {}
     flex: 1;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  .linkContainer {
-    display: flex;
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-basis: 22.5rem;
-    height: 7.5rem;
-    border: solid 3px;
   }
 
   a {
     @include font($main, huge);
     color: $offBlack;
     text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-basis: $fb-width;
+    height: 7.5rem;
+    border: solid 3px;
   }
 
   a:hover{
     color: $offWhite;
-  }
-
-  .linkContainer:hover {
     background-color: $offBlack;
     border: solid 3px $offBlack;
   }
 
-  .linkContainer:hover > a {
-    color: $offWhite;
+  #firstLink {
+    margin-right: $fb-gap;
   }
 </style>

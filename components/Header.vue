@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="headContainer">
-      <NuxtLink to="/">Home</NuxtLink>
+      <NuxtLink to="/" id="firstLink">Home</NuxtLink>
       <NuxtLink to="/about">About</NuxtLink>
     </div>
       
@@ -24,7 +24,7 @@ export default {
   .headContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
   }
 
@@ -32,9 +32,15 @@ export default {
     @include font($main, big);
     color: $offBlack;
     text-decoration: none;
+    text-align: center;
+    flex-basis: $fb-width;
   }
 
   a.nuxt-link-exact-active {
     text-decoration: underline;
+  }
+
+  #firstLink {
+    margin-right: $fb-gap;
   }
 </style>

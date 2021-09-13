@@ -1,8 +1,8 @@
 <template>
   <footer>
       <div class="socialLinks">
-        <a id="firstSocial" href="https://github.com/MoritzKronberger/portfolio">git</a>
-        <a href="https://de.linkedin.com/">li</a>
+        <a id="firstSocial" href="https://github.com/MoritzKronberger/portfolio"><img src="../assets/icons/gitHub.png" alt="gitHub"></a>
+        <a href="https://de.linkedin.com/"><img src="../assets/icons/linkedIn.png" alt="linkedIn"></a>
       </div>
       <p>© Moritz Kronberger 2021</p>
   </footer>
@@ -36,11 +36,14 @@ export default {
 
   a {
     @include font($main, small);
-    background-color: $offBlack;
-    color: $offWhite;
-    padding: .2rem;
+    //background-color: $offBlack;
+    color: $offBlack;
     text-decoration: none;
     margin-bottom: 1rem;
+  }
+
+  a > img {
+    width: 1.5rem;
   }
 
   #firstSocial{
