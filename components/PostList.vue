@@ -1,8 +1,11 @@
 <template>
     <ul>
         <li v-for="post of posts" :key="post.slug">
-          <NuxtLink :to="{ name: 'slug', params: { slug: post.slug } }">{{ post.title }}</NuxtLink>
-          <p>{{post.description}}</p>
+          <NuxtLink :to="{ name: 'slug', params: { slug: post.slug } }">
+            <p id="postTitle">{{ post.title }}</p>
+            <img :src="require(`../content/projects/assets/images/thumbnails/${post.slug}.png`)" alt="post thumbnail">
+            <p>{{post.description}}</p>
+          </NuxtLink>
         </li>
     </ul>
 </template>
@@ -31,12 +34,17 @@
     }
 
     a {
-        @include font($code, regular);
+        @include font($main, regular);
         color: $offBlack;
         text-decoration: none;
     }
 
-    p {
-        @include font($main, regular);
+    #postTitle {
+        @include font($code, regular);
+    }
+
+    img {
+        width: $fb-width;
+        margin: .6rem 0;
     }
 </style>
