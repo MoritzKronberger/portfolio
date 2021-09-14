@@ -2,6 +2,8 @@
 title: ReadMe
 description: ReadMe ist eine Anwendung, die ihre User zu einer bewussteren Interaktion mit Text bewegt. Als Museumsinstallation bringt sie dem Nutzer in ca. 1000 Zeichen die Grundinformationen zum NSA-Spionageskandal von 2013 näher.
 category: compsci
+date: winter 2020/21
+team: solo
 ---
 
 ## Hintergrund
