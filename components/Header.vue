@@ -4,7 +4,6 @@
       <NuxtLink to="/" id="firstLink">Home</NuxtLink>
       <NuxtLink to="/about">About</NuxtLink>
     </div>
-      
   </header>
 </template>
 
@@ -33,14 +32,11 @@ export default {
     color: $offBlack;
     text-decoration: none;
     text-align: center;
-    flex-basis: $fb-width;
+    flex-basis: $base-width-aspect;
+    margin: 0 min(#{$base-gap-half}, 10%);
   }
 
   a.nuxt-link-exact-active {
     text-decoration: underline;
-  }
-
-  #firstLink {
-    margin-right: $fb-gap;
   }
 </style>

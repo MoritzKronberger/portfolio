@@ -7,7 +7,7 @@
 <script>
 import PostList from '../components/PostList.vue'
 export default {
-  layout: 'project_showcase',
+  //layout: 'project_showcase',
   components: {
     PostList
   },

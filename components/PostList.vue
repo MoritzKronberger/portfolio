@@ -1,13 +1,15 @@
 <template>
-    <ul>
-        <li v-for="post of posts" :key="post.slug">
-          <NuxtLink :to="{ name: 'slug', params: { slug: post.slug } }">
-            <p id="postTitle">{{ post.title }}</p>
-            <img :src="require(`../content/projects/assets/images/thumbnails/${post.slug}.png`)" alt="post thumbnail">
-            <p>{{post.description}}</p>
-          </NuxtLink>
-        </li>
-    </ul>
+    <article class="projectsWrapper">
+        <ul>
+            <li v-for="post of posts" :key="post.slug">
+            <NuxtLink :to="{ name: 'slug', params: { slug: post.slug } }">
+                <p id="postTitle">{{ post.title }}</p>
+                <img :src="require(`../content/projects/assets/images/thumbnails/${post.slug}.png`)" alt="post thumbnail">
+                <p>{{post.description}}</p>
+            </NuxtLink>
+            </li>
+        </ul>
+    </article>
 </template>
 
 <script>
@@ -29,8 +31,26 @@
 <style lang="scss" scoped>
     @import '@/assets/css/_shared';
 
+    .projectsWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
     ul {
         list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        width: 2*($base-width-aspect + $base-gap);
+    }
+
+    li {
+        flex-basis: $base-width-aspect;
+        flex-shrink: 0;
+        margin: 1.5rem $base-gap-half;
     }
 
     a {
@@ -44,7 +64,11 @@
     }
 
     img {
-        width: $fb-width;
+        width: 100%;
         margin: .6rem 0;
+    }
+
+    p {
+        text-align: justify;
     }
 </style>
