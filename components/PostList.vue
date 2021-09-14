@@ -42,15 +42,14 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: flex-start;
         width: 2*($base-width-aspect + $base-gap);
     }
 
     li {
-        flex-basis: $base-width-aspect;
-        flex-shrink: 0;
-        margin: 1.5rem $base-gap-half;
+        flex-basis: $base-width-aspect + 2*($base-gap-half - $base-gap-half/4);
+        margin: 1.5rem $base-gap-half/4;
     }
 
     a {

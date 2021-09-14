@@ -18,6 +18,7 @@ export default {
 
   header {
     margin-top: 2rem;
+    position: sticky;
   }
 
   .headContainer {

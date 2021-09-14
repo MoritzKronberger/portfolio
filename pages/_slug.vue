@@ -31,7 +31,7 @@
 
     article {
         flex-basis: 2*($base-width-aspect + $base-gap);
-        margin: 0 $base-gap-half/2;
+        margin: 0 $base-gap-half/4;
     }
 
     h1 {

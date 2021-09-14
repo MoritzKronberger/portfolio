@@ -21,6 +21,7 @@ export default {
 
   main {
     flex: 1;
+
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -28,8 +29,10 @@ export default {
   }
 
   article {
-    flex-basis: $fb-width;
-    margin-bottom: $fb-gap;
+    flex-basis: $base-width-aspect;
+    margin-bottom: 15%;
+    margin-right: $base-gap-half/4;
+    margin-left: $base-gap-half/4;
     text-align: justify;
   }
 
