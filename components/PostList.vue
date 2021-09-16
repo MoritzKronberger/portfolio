@@ -50,12 +50,18 @@
         flex-wrap: wrap;
         justify-content: flex-start;
         align-items: flex-start;
-        width: 2*($base-width-aspect + $base-gap);
+        flex-basis: calc(2 * (var(--clm-width) + var(--clm-gap)));
+    }
+
+    @media (orientation: portrait) {
+        ul {
+           justify-content: center; 
+        }
     }
 
     li {
-        flex-basis: $base-width-aspect + 2*($base-gap-half - $base-gap-eigth);
-        margin: 1.5rem $base-gap-eigth;
+        flex-basis: v(clm-width);
+        margin: 1.5rem calc(.5 * var(--clm-gap));
     }
 
     a {
