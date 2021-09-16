@@ -95,3 +95,7 @@ $base-gap: 290px;
 $base-gap-half: math.div($base-gap, 2);
 $base-gap-quarter: math.div($base-gap, 4);
 $base-gap-eigth: math.div($base-gap, 8);
+
+@function v($property){
+    @return var(--#{$property});
+}
