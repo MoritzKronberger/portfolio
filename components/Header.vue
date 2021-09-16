@@ -17,8 +17,11 @@ export default {
   @import '@/assets/css/_shared';
 
   header {
-    margin-top: 2rem;
+    grid-area: header;
+    padding: 2rem 0;
     position: sticky;
+    top: 0;
+    background-color: $offWhite;
   }
 
   .headContainer {

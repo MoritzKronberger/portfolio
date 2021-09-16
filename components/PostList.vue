@@ -1,15 +1,17 @@
 <template>
-    <article class="projectsWrapper">
-        <ul>
-            <li v-for="post of posts" :key="post.slug">
-            <NuxtLink :to="{ name: 'slug', params: { slug: post.slug } }">
-                <p id="postTitle">{{ post.title }}</p>
-                <img :src="require(`../content/projects/assets/images/thumbnails/${post.slug}.png`)" alt="post thumbnail">
-                <p>{{post.description}}</p>
-            </NuxtLink>
-            </li>
-        </ul>
-    </article>
+    <main>
+        <article class="projectsWrapper">
+            <ul>
+                <li v-for="post of posts" :key="post.slug">
+                <NuxtLink :to="{ name: 'slug', params: { slug: post.slug } }">
+                    <p id="postTitle">{{ post.title }}</p>
+                    <img :src="require(`../content/projects/assets/images/thumbnails/${post.slug}.png`)" alt="post thumbnail">
+                    <p>{{post.description}}</p>
+                </NuxtLink>
+                </li>
+            </ul>
+        </article>
+    </main>
 </template>
 
 <script>
@@ -30,6 +32,10 @@
 
 <style lang="scss" scoped>
     @import '@/assets/css/_shared';
+
+    main {
+        grid-area: main;
+    }
 
     .projectsWrapper {
         display: flex;

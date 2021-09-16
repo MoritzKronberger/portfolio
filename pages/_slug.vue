@@ -24,6 +24,8 @@
     @import '@/assets/css/_shared';
 
     main {
+        grid-area: main;
+
         display: flex;
         justify-content: center;
         align-items: flex-start;

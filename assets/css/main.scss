@@ -1,7 +1,38 @@
 @import '@/assets/css/_shared';
+@import '@/assets/css/margins';
 
 :root {
     font-size: 16px;
+
+    // set custom column properties:
+    @each $orientation, $elements in $columns {
+        @if $orientation == horizontal {
+            @each $element, $value in $elements {
+                --clm-#{$element}: #{$value};
+            }
+        }@else {
+            @media (orientation: portrait) {
+                @each $element, $value in $elements {
+                    --clm-#{$element}: #{$value};
+                }
+            }
+        }
+    }
+    
+    // custom margin properties:
+    @each $orientation, $elements in $margins {
+        @if $orientation == big {
+            @each $element, $value in $elements {
+                --mrg-#{$element}: #{$value};
+            }
+        }@else {
+            @media (orientation: portrait) {
+                @each $element, $value in $elements {
+                    --mrg-#{$element}: #{$value};
+                }
+            }
+        }
+    }
 }
 
 * {
@@ -17,7 +48,13 @@ body {
 }
 
 .bodyDiv {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer"
+    ;
     min-height: 100vh;
 }

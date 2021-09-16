@@ -15,7 +15,7 @@ export default {}
   @import '@/assets/css/_shared';
 
   main {
-    flex: 1;
+    grid-area: main;
 
     display: flex;
     flex-direction: row;

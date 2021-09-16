@@ -1,7 +1,5 @@
 <template>
-  <main>
-      <PostList :category="category"/>
-  </main>
+  <PostList :category="category"/>
 </template>
 
 <script>

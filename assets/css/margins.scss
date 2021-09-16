@@ -1,0 +1,31 @@
+@use "sass:math";
+
+$columns: (
+    horizontal: (
+        width: 360px,
+        height: 120px,
+        gap: 290px
+    ),
+    vertical: (
+        width: 360px,
+        height: 120px,
+        gap: 290px
+    )
+);
+
+$margins: (
+    horizontal: (
+        huge: 4rem,
+        big: 3rem,
+        regular: 2rem,
+        small: 1rem,
+        tiny: .5rem
+    ),
+    vertical: (
+        huge: 4rem,
+        big: 3rem,
+        regular: 2rem,
+        small: 1rem,
+        tiny: .5rem
+    )
+)
