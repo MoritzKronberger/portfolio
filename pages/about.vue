@@ -31,8 +31,8 @@ export default {
   article {
     flex-basis: $base-width-aspect;
     margin-bottom: 15%;
-    margin-right: $base-gap-half/4;
-    margin-left: $base-gap-half/4;
+    margin-right: $base-gap-eigth;
+    margin-left: $base-gap-eigth;
     text-align: justify;
   }
 

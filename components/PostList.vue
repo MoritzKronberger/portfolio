@@ -48,8 +48,8 @@
     }
 
     li {
-        flex-basis: $base-width-aspect + 2*($base-gap-half - $base-gap-half/4);
-        margin: 1.5rem $base-gap-half/4;
+        flex-basis: $base-width-aspect + 2*($base-gap-half - $base-gap-eigth);
+        margin: 1.5rem $base-gap-eigth;
     }
 
     a {

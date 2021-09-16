@@ -31,17 +31,31 @@
 
     article {
         flex-basis: 2*($base-width-aspect + $base-gap);
-        margin: 0 $base-gap-half/4;
+        margin: 0 $base-gap-eigth;
     }
 
     h1 {
         @include font($code, huge);
-        margin: $base-gap-half/2 0 0 0;
+        margin: $base-gap-quarter 0 0 0;
     }
 
     .frontMatter {
         @include font($code, regular);
         list-style-type: none;
-        margin: $base-gap-half/4 0;
+        margin: $base-gap-eigth 0;
+    }
+
+    
+</style>
+
+<style lang="scss">
+    // styling content generated from .md-files
+    @import '@/assets/css/_shared';
+
+    .nuxt-content {
+        h2 {
+            @include font($code, big);
+            margin: .5rem .75rem 0 0;
+        }
     }
 </style>

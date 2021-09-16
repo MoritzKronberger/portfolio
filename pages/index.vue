@@ -40,7 +40,7 @@ export default {}
     flex-shrink: 0;
     width: $base-width-aspect;
     height: $base-height-aspect;
-    margin: $base-gap-half/4 $base-gap-half;
+    margin: $base-gap-eigth $base-gap-half;
 
     display: flex;
     flex-direction: row;

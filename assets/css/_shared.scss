@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $offWhite: #FBFBFB;
 $offBlack: #222222;
 
@@ -88,5 +90,8 @@ $fb-combined-max-width: 2*$fb-max-width+$fb-max-gap;
 $base-scale: 10px;
 $base-width-aspect:  36 * $base-scale;
 $base-height-aspect: 12 * $base-scale;
+
 $base-gap: 290px;
-$base-gap-half: $base-gap/2;
+$base-gap-half: math.div($base-gap, 2);
+$base-gap-quarter: math.div($base-gap, 4);
+$base-gap-eigth: math.div($base-gap, 8);
