@@ -32,19 +32,19 @@
     }
 
     article {
-        flex-basis: 2*($base-width-aspect + $base-gap);
-        margin: 0 $base-gap-eigth;
+        flex-basis: calc(2 * (var(--clm-width) + var(--clm-gap)));
+        margin: 0 v(mrg-600);
     }
 
     h1 {
         @include font($code, huge);
-        margin: $base-gap-quarter 0 0 0;
+        margin: v(mrg-900) 0 0 0;
     }
 
     .frontMatter {
         @include font($code, regular);
         list-style-type: none;
-        margin: $base-gap-eigth 0;
+        margin: v(mrg-600) 0;
     }
 
     
@@ -57,7 +57,7 @@
     .nuxt-content {
         h2 {
             @include font($code, big);
-            margin: .5rem .75rem 0 0;
+            margin: v(mrg-300) 0 v(mrg-200);
         }
     }
 </style>

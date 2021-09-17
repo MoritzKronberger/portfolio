@@ -77,25 +77,7 @@ $code: (
     }
 }
 
-
-// column width for aligining header elements with flexboxes
-$fb-width: 14%;
-$fb-max-width: 22.5rem;
-$fb-gap: 12%;
-$fb-max-gap: 19.2rem;
-$fb-gap-half: 6%;
-$fb-combined-width: $fb-width + $fb-gap;
-$fb-combined-max-width: 2*$fb-max-width+$fb-max-gap;
-
-$base-scale: 10px;
-$base-width-aspect:  36 * $base-scale;
-$base-height-aspect: 12 * $base-scale;
-
-$base-gap: 290px;
-$base-gap-half: math.div($base-gap, 2);
-$base-gap-quarter: math.div($base-gap, 4);
-$base-gap-eigth: math.div($base-gap, 8);
-
+// custom property helper function
 @function v($property){
     @return var(--#{$property});
 }

@@ -38,9 +38,9 @@ export default {}
     border: solid 3px;
 
     flex-shrink: 0;
-    width: $base-width-aspect;
-    height: $base-height-aspect;
-    margin: $base-gap-eigth $base-gap-half;
+    width: v(clm-width);
+    height: v(clm-height);
+    margin: v(mrg-600) calc(var(--clm-gap) * .5);
 
     display: flex;
     flex-direction: row;

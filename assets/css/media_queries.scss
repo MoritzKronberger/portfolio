@@ -1,6 +1,5 @@
-@use "sass:math";
-
-$columns: (
+// main-"grid" sizes for media queries
+$main-columns: (
     horizontal: (
         width: 360px,
         height: 120px,
@@ -13,19 +12,40 @@ $columns: (
     )
 );
 
-$margins: (
+// header-"grid" sizes for media queries
+$header-columns: (
     horizontal: (
-        huge: 4rem,
-        big: 3rem,
-        regular: 2rem,
-        small: 1rem,
-        tiny: .5rem
+        width:  map-get(map-get($main-columns, horizontal), width),
+        height: map-get(map-get($main-columns, horizontal), height),
+        gap:    map-get(map-get($main-columns, horizontal), gap)
     ),
     vertical: (
-        huge: 4rem,
-        big: 3rem,
-        regular: 2rem,
-        small: 1rem,
-        tiny: .5rem
+        width: 520px,
+        height: 120px,
+        gap: 2rem
     )
-)
+);
+
+// margin sizes for media queries
+$margins: (
+    big: (
+        900: 5rem,
+        700: 2.5rem,
+        600: 2.25rem,
+        500: 1.5rem,
+        400: 1rem,
+        300: .75rem,
+        200: .6rem
+    ),
+    small: (
+        900: 1.5rem,
+        700: 2.5rem,
+        600: 2.25rem,
+        500: 1.5rem,
+        400: 1rem,
+        300: .75rem,
+        200: .6rem
+    )
+);
+
+$mobileBreakpoint: 600px;

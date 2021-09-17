@@ -61,7 +61,7 @@
 
     li {
         flex-basis: v(clm-width);
-        margin: 1.5rem calc(.5 * var(--clm-gap));
+        margin: v(mrg-500) calc(.5 * var(--clm-gap));
     }
 
     a {
@@ -76,7 +76,7 @@
 
     img {
         width: 100%;
-        margin: .6rem 0;
+        margin: v(mrg-200) 0;
     }
 
     p {

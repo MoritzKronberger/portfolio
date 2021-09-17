@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="headContainer">
-      <NuxtLink to="/" id="firstLink">Home</NuxtLink>
+      <NuxtLink to="/">Home</NuxtLink>
       <NuxtLink to="/about">About</NuxtLink>
     </div>
   </header>
@@ -18,7 +18,7 @@ export default {
 
   header {
     grid-area: header;
-    padding: 2rem 0;
+    padding: v(mrg-500) 0;
     position: sticky;
     top: 0;
     background-color: $offWhite;
@@ -36,8 +36,8 @@ export default {
     color: $offBlack;
     text-decoration: none;
     text-align: center;
-    flex-basis: $base-width-aspect;
-    margin: 0 min(#{$base-gap-half}, 10%);
+    flex-basis: v(hdc-width);
+    margin: 0 min( calc(var(--hdc-gap) * 0.5) , 10%);
   }
 
   a.nuxt-link-exact-active {

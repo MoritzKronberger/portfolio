@@ -4,8 +4,8 @@
 :root {
     font-size: 16px;
 
-    // set custom column properties:
-    @each $orientation, $elements in $columns {
+    // set custom main-column properties:
+    @each $orientation, $elements in $main-columns {
         @if $orientation == horizontal {
             @each $element, $value in $elements {
                 --clm-#{$element}: #{$value};
@@ -18,15 +18,30 @@
             }
         }
     }
+
+    // set custom header-column properties:
+    @each $orientation, $elements in $main-columns {
+        @if $orientation == horizontal {
+            @each $element, $value in $elements {
+                --hdc-#{$element}: #{$value};
+            }
+        }@else {
+            @media (orientation: portrait) {
+                @each $element, $value in $elements {
+                    --hdc-#{$element}: #{$value};
+                }
+            }
+        }
+    }
     
     // custom margin properties:
-    @each $orientation, $elements in $margins {
-        @if $orientation == big {
+    @each $size, $elements in $margins {
+        @if $size == big {
             @each $element, $value in $elements {
                 --mrg-#{$element}: #{$value};
             }
         }@else {
-            @media (orientation: portrait) {
+            @media only screen and(max-width: $mobileBreakpoint) {
                 @each $element, $value in $elements {
                     --mrg-#{$element}: #{$value};
                 }

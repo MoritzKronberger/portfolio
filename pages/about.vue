@@ -29,10 +29,8 @@ export default {
   }
 
   article {
-    flex-basis: $base-width-aspect;
-    margin-bottom: 15%;
-    margin-right: $base-gap-eigth;
-    margin-left: $base-gap-eigth;
+    flex-basis: v(clm-width);
+    margin: 0 v(mrg-600) 15%;
     text-align: justify;
   }
 
