@@ -1,11 +1,11 @@
 // main-"grid" sizes for media queries
 $main-columns: (
-    horizontal: (
+    regular: (
         width: 360px,
         height: 120px,
         gap: 290px
     ),
-    vertical: (
+    mobile: (
         width: 520px,
         height: 120px,
         gap: 2rem
@@ -14,12 +14,12 @@ $main-columns: (
 
 // header-"grid" sizes for media queries
 $header-columns: (
-    horizontal: (
-        width:  map-get(map-get($main-columns, horizontal), width),
-        height: map-get(map-get($main-columns, horizontal), height),
-        gap:    map-get(map-get($main-columns, horizontal), gap)
+    regular: (
+        width:  map-get(map-get($main-columns, regular), width),
+        height: map-get(map-get($main-columns, regular), height),
+        gap:    map-get(map-get($main-columns, regular), gap)
     ),
-    vertical: (
+    mobile: (
         width: 520px,
         height: 120px,
         gap: 2rem
@@ -28,7 +28,7 @@ $header-columns: (
 
 // margin sizes for media queries
 $margins: (
-    big: (
+    regular: (
         900: 5rem,
         700: 2.5rem,
         600: 2.25rem,
@@ -37,7 +37,7 @@ $margins: (
         300: .75rem,
         200: .6rem
     ),
-    small: (
+    mobile: (
         900: 1.5rem,
         700: 2.5rem,
         600: 2.25rem,
@@ -49,3 +49,19 @@ $margins: (
 );
 
 $mobileBreakpoint: 600px;
+
+@mixin setPropsFromMap($map, $prefix){
+    @each $size, $elements in $map {
+        @if $size == regular {
+            @each $element, $value in $elements {
+                --#{$prefix}-#{$element}: #{$value};
+            }
+        }@else {
+            @media only screen and(max-width: $mobileBreakpoint) {
+                @each $element, $value in $elements {
+                    --#{$prefix}-#{$element}: #{$value};
+                }
+            }
+        }
+    }
+}

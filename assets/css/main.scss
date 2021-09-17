@@ -5,49 +5,13 @@
     font-size: 16px;
 
     // set custom main-column properties:
-    @each $orientation, $elements in $main-columns {
-        @if $orientation == horizontal {
-            @each $element, $value in $elements {
-                --clm-#{$element}: #{$value};
-            }
-        }@else {
-            @media (orientation: portrait) {
-                @each $element, $value in $elements {
-                    --clm-#{$element}: #{$value};
-                }
-            }
-        }
-    }
+    @include setPropsFromMap($main-columns, clm);
 
     // set custom header-column properties:
-    @each $orientation, $elements in $main-columns {
-        @if $orientation == horizontal {
-            @each $element, $value in $elements {
-                --hdc-#{$element}: #{$value};
-            }
-        }@else {
-            @media (orientation: portrait) {
-                @each $element, $value in $elements {
-                    --hdc-#{$element}: #{$value};
-                }
-            }
-        }
-    }
-    
+    @include setPropsFromMap($header-columns, hdc);
+
     // custom margin properties:
-    @each $size, $elements in $margins {
-        @if $size == big {
-            @each $element, $value in $elements {
-                --mrg-#{$element}: #{$value};
-            }
-        }@else {
-            @media only screen and(max-width: $mobileBreakpoint) {
-                @each $element, $value in $elements {
-                    --mrg-#{$element}: #{$value};
-                }
-            }
-        }
-    }
+    @include setPropsFromMap($margins, mrg);
 }
 
 * {
