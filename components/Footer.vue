@@ -18,7 +18,6 @@ export default {
   @import '@/assets/css/_shared';
 
   footer {
-    //margin-top: auto;
     margin-bottom: 1.5rem;
     grid-area: footer;
   }
@@ -37,7 +36,6 @@ export default {
 
   a {
     @include font($main, small);
-    //background-color: $offBlack;
     color: $offBlack;
     text-decoration: none;
     margin-bottom: 1rem;
