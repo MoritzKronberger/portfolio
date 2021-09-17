@@ -1,7 +1,10 @@
-@use "sass:math";
-
 $offWhite: #FBFBFB;
 $offBlack: #222222;
+
+// custom property helper function
+@function v($property){
+    @return var(--#{$property});
+}
 
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
@@ -13,27 +16,27 @@ $main: (
     huge: (
         family: 'Atkinson Hyperlegible',
         weight: 700,
-        size: 3.9375rem
+        size: v(fs-main-huge)
     ),
     big: (
         family: 'Atkinson Hyperlegible',
         weight: 400,
-        size: 1.9375rem
+        size: v(fs-main-big)
     ),
     regular: (
         family: 'Atkinson Hyperlegible',
         weight: 400,
-        size: 1rem
+        size: v(fs-main-regular)
     ),
     small: (
         family: 'Atkinson Hyperlegible',
         weight: 400,
-        size: .6875rem
+        size: v(fs-main-small)
     ),
     tiny: (
         family: 'Atkinson Hyperlegible',
         weight: 400,
-        size: .5rem
+        size: v(fs-main-tiny)
     )
 );
 
@@ -41,27 +44,27 @@ $code: (
     huge: (
         family: 'Roboto Mono',
         weight: 700,
-        size: 3.5rem
+        size: v(fs-code-huge)
     ),
     big: (
         family: 'Roboto Mono',
         weight: 700,
-        size: 1.71875rem
+        size: v(fs-code-big)
     ),
     regular: (
         family: 'Roboto Mono',
         weight: 400,
-        size: .89375rem
+        size: v(fs-code-regular)
     ),
     small: (
         family: 'Roboto Mono',
         weight: 400,
-        size: .6125rem
+        size: v(fs-code-small)
     ),
     tiny: (
         family: 'Roboto Mono',
         weight: 400,
-        size: .45
+        size: v(fs-code-tiny)
     )
 );
 
@@ -75,9 +78,4 @@ $code: (
             }
         }
     }
-}
-
-// custom property helper function
-@function v($property){
-    @return var(--#{$property});
 }

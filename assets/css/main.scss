@@ -4,6 +4,12 @@
 :root {
     font-size: 16px;
 
+    // set custom main-font-size properties:
+    @include setPropsFromMap(map-get($font-sizes, main), fs-main);
+
+    // set custom code-font-size properties:
+    @include setPropsFromMap(map-get($font-sizes, code), fs-code);
+
     // set custom main-column properties:
     @include setPropsFromMap($main-columns, clm);
 

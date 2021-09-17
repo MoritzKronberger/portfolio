@@ -1,3 +1,39 @@
+// font sizes for media queries
+$font-sizes: (
+    main: (
+        regular: (
+            huge: 3.9375rem,
+            big: 1.9375rem,
+            regular: 1rem,
+            small: .6875rem,
+            tiny: .5rem
+        ),
+        mobile: (
+            huge: 2rem,
+            big: 1.5rem,
+            regular: 1rem,
+            small: .6875rem,
+            tiny: .5rem
+        )
+    ),
+    code: (
+        regular: (
+            huge: 3.5rem,
+            big: 1.71875rem,
+            regular: .89375rem,
+            small: .6125rem,
+            tiny: .45
+        ),
+        mobile: (
+            huge: 3.5rem,
+            big: 1.71875rem,
+            regular: .89375rem,
+            small: .7rem,
+            tiny: .6
+        )
+    )
+);
+
 // main-"grid" sizes for media queries
 $main-columns: (
     regular: (
@@ -6,9 +42,9 @@ $main-columns: (
         gap: 290px
     ),
     mobile: (
-        width: 520px,
-        height: 120px,
-        gap: 2rem
+        width: 260px,
+        height: 80px,
+        gap: .75rem
     )
 );
 
@@ -20,9 +56,9 @@ $header-columns: (
         gap:    map-get(map-get($main-columns, regular), gap)
     ),
     mobile: (
-        width: 520px,
-        height: 120px,
-        gap: 2rem
+        width: auto,
+        height: 80px,
+        gap: 3rem
     )
 );
 
