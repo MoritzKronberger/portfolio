@@ -40,9 +40,10 @@ export default {
     color: $offBlack;
     text-decoration: none;
     margin: 0 calc(var(--mrg-footer-between-socials) * .5);
+    line-height: 0;
   }
 
   a > img {
-    width: v(mrg-footer-icon-size);
+    height: v(mrg-footer-icon-size);
   }
 </style>
