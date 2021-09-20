@@ -16,6 +16,11 @@
         async asyncData({ $content, params }){
             const post = await $content('projects/markdown', params.slug).fetch();
             return { post }
+        },
+        head() {
+            return {
+                title: this.post.title
+            }
         }
     } 
 </script>

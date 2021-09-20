@@ -13,6 +13,11 @@ export default {
     return {
       category: 'compsci'
     }
+  },
+  head() {
+    return {
+      title: 'CompSci'
+    }
   }
 }
 </script>

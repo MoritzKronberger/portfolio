@@ -8,7 +8,13 @@
 </template>
 
 <script>
-export default {}
+  export default {
+    head() {
+      return {
+        title: 'Portfolio'
+      }
+    }
+  }
 </script>
 
 <style lang="scss" scoped>

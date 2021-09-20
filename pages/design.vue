@@ -13,6 +13,11 @@ export default {
     return {
       category: 'design'
     }
+  },
+  head() {
+    return {
+      title: 'Design'
+    }
   }
 }
 </script>
