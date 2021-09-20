@@ -11,7 +11,10 @@
   export default {
     head() {
       return {
-        title: 'Portfolio'
+        title: 'Portfolio',
+        meta: [
+          { hid: 'desc-portfolio', name: 'description', content: `This is Moritz Kronberger's personal portfolio-website.` }
+        ]
       }
     }
   }

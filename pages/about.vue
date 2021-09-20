@@ -14,7 +14,10 @@
 export default {
   head() {
     return {
-      title: 'About'
+      title: 'About',
+        meta: [
+          { hid: 'desc-about', name: 'description', content: `My portfolio's about page.` }
+        ]
     }
   }
 }

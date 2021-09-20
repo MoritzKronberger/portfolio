@@ -19,7 +19,10 @@
         },
         head() {
             return {
-                title: this.post.title
+                title: this.post.title,
+            meta: [
+                { hid: `desc-${this.post.slug}`, name: 'description', content: this.post.meta_desc ? this.post.meta_desc : `${this.post.title}: One of my ${this.post.category} projects` }
+            ]
             }
         }
     } 

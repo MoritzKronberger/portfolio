@@ -16,7 +16,10 @@ export default {
   },
   head() {
     return {
-      title: 'CompSci'
+      title: 'CompSci',
+        meta: [
+          { hid: 'compsci-portfolio', name: 'description', content: `List of my computer science projects` }
+        ]
     }
   }
 }

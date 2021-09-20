@@ -16,7 +16,10 @@ export default {
   },
   head() {
     return {
-      title: 'Design'
+      title: 'Design',
+        meta: [
+          { hid: 'desc-design', name: 'description', content: `List of my design projects` }
+        ]
     }
   }
 }
