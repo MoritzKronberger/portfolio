@@ -17,7 +17,10 @@
     @include setPropsFromMap($header-columns, hdc);
 
     // custom margin properties:
-    @include setPropsFromMap($margins, mrg);
+    @each $component, $sizes in $margins {
+        @include setPropsFromMap(map-get($margins, #{$component}), mrg-#{$component});
+    };
+    //@include setPropsFromMap($margins, mrg);
 }
 
 * {
@@ -30,6 +33,7 @@ body {
     background-color: $offWhite;
     color: $offBlack;
     @include font($main, regular);
+    //line-height: 110%;
 }
 
 .bodyDiv {

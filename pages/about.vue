@@ -30,17 +30,17 @@ export default {
 
   article {
     flex-basis: v(clm-width);
-    margin: 0 v(mrg-600) 15%;
+    margin-bottom: v(mrg-about-bottom);
     text-align: justify;
   }
 
   h2 {
     @include font($code, big);
-    margin-bottom: 2rem;
+    margin-bottom: v(mrg-about-h2-bottom);
   }
 
   img {
-    width: 2rem;
-    margin-bottom: 2.5rem;
+    width: v(mrg-about-icon-width);
+    margin-bottom: v(mrg-about-icon-bottom);
   }
 </style>

@@ -18,7 +18,7 @@ export default {
   @import '@/assets/css/_shared';
 
   footer {
-    margin: v(mrg-600) 0 v(mrg-500);
+    margin: v(mrg-footer-top) 0 v(mrg-footer-bottom);
     grid-area: footer;
   }
 
@@ -32,16 +32,17 @@ export default {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-bottom: v(mrg-footer-icons-bottom);
   }
 
   a {
     @include font($main, small);
     color: $offBlack;
     text-decoration: none;
-    margin: 0 calc(var(--mrg-400) * .5) v(mrg-400) calc(var(--mrg-400) * .5);
+    margin: 0 calc(var(--mrg-footer-between-socials) * .5);
   }
 
   a > img {
-    width: v(mrg-500);
+    width: v(mrg-footer-icon-size);
   }
 </style>

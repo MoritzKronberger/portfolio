@@ -25,10 +25,9 @@ export default {}
 
   .linkContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: v(clm-flex-direction);
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
   }
 
   a {
@@ -40,7 +39,7 @@ export default {}
     flex-shrink: 0;
     width: v(clm-width);
     height: v(clm-height);
-    margin: v(mrg-600) calc(var(--clm-gap) * .5);
+    margin: v(mrg-index-top) calc(var(--clm-gap) * .5);
 
     display: flex;
     flex-direction: row;

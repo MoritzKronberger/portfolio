@@ -8,12 +8,13 @@ $font-sizes: (
             small: .6875rem,
             tiny: .5rem
         ),
+        tablet: (
+            huge: 2.25rem,
+            big: 1.8125rem
+        ),
         mobile: (
             huge: 2rem,
-            big: 1.5rem,
-            regular: 1rem,
-            small: .6875rem,
-            tiny: .5rem
+            big: 1.5rem
         )
     ),
     code: (
@@ -24,12 +25,13 @@ $font-sizes: (
             small: .6125rem,
             tiny: .45
         ),
+        tablet: (
+            huge: 3.5rem,
+            big: 1.125rem,
+        ),
         mobile: (
             huge: 3.5rem,
-            big: 1.71875rem,
-            regular: .89375rem,
-            small: .7rem,
-            tiny: .6
+            big: 1rem,
         )
     )
 );
@@ -39,12 +41,19 @@ $main-columns: (
     regular: (
         width: 360px,
         height: 120px,
-        gap: 290px
+        gap: 290px,
+        flex-direction: row
+    ),
+    tablet: (
+        width: 224px,
+        height: 80px,
+        gap: 128px
     ),
     mobile: (
-        width: 260px,
-        height: 80px,
-        gap: .75rem
+        width: 224px,
+        height: 64px,
+        gap: 2rem,
+        flex-direction: column
     )
 );
 
@@ -55,6 +64,11 @@ $header-columns: (
         height: map-get(map-get($main-columns, regular), height),
         gap:    map-get(map-get($main-columns, regular), gap)
     ),
+    tablet: (
+        width:  map-get(map-get($main-columns, tablet), width),
+        height: map-get(map-get($main-columns, tablet), height),
+        gap:    map-get(map-get($main-columns, tablet), gap)
+    ),
     mobile: (
         width: auto,
         height: 80px,
@@ -64,27 +78,89 @@ $header-columns: (
 
 // margin sizes for media queries
 $margins: (
-    regular: (
-        900: 5rem,
-        700: 2.5rem,
-        600: 2.25rem,
-        500: 1.5rem,
-        400: 1rem,
-        300: .75rem,
-        200: .6rem
+    global: (
+        regular: (
+            sides: 2.25rem
+        )
     ),
-    mobile: (
-        900: 1.5rem,
-        700: 2.5rem,
-        600: 2.25rem,
-        500: 1.5rem,
-        400: 1rem,
-        300: .75rem,
-        200: .6rem
+    header: (
+        regular: (
+            top: 1.5rem,
+            bottom: 1.5rem
+        )
+    ),
+    footer: (
+        regular: (
+            top: 3rem,
+            bottom: 2rem,
+            icons-bottom: .6rem,
+            between-socials: 1rem,
+            icon-size: 2rem
+        ),
+        tablet: (
+            icon-size: 1.8125rem
+        ),
+        mobile: (
+            between-socials: 1.5rem,
+            icon-size: 1.5rem
+        )
+    ),
+    index: (
+        regular: (
+            top: 0
+        ),
+        mobile: (
+            top: 1rem
+        )
+    ),
+    about: (
+        regular: (
+            bottom: 12%,
+            icon-width: 2rem,
+            icon-bottom: 2.5rem,
+            h2-bottom: 2rem
+        ),
+        tablet: (
+            icon-width: 1.75rem,
+            icon-bottom: 1.5rem,
+            h2-bottom: 1.5rem
+        ),
+        mobile: (
+            bottom: 16%,
+            icon-width: 1.625rem,
+            icon-bottom: 1.2rem,
+            h2-bottom: 1rem
+        )
+    ),
+    postList: (
+        regular: (
+            items-bottom: 2rem
+        ),
+        mobile: (
+            items-bottom: 2.5rem
+        )
+    ),
+    slug: (
+        regular:  (
+            h1-top: 7rem,
+            frontMatter: 3rem
+        ),
+        tablet: (
+            h1-top: 3rem,
+            frontMatter: 2.25rem
+        ),
+        mobile: (
+            h1-top: 1.5rem,
+            frontMatter: 2rem
+        )
     )
 );
 
-$mobileBreakpoint: 600px;
+$mainCl-reg: map-get($main-columns , regular);
+$mainCl-tab: map-get($main-columns , tablet);
+
+$tabletBreakpoint: 2*(map-get($mainCl-reg, width) + 1.5 * map-get($mainCl-reg, gap));
+$mobileBreakpoint: 2*(map-get($mainCl-tab, width) + 1.5 * map-get($mainCl-tab, gap));
 
 @mixin setPropsFromMap($map, $prefix){
     @each $size, $elements in $map {
@@ -92,7 +168,14 @@ $mobileBreakpoint: 600px;
             @each $element, $value in $elements {
                 --#{$prefix}-#{$element}: #{$value};
             }
-        }@else {
+        }@else if $size== tablet{
+            @media only screen and(max-width: $tabletBreakpoint) {
+                @each $element, $value in $elements {
+                    --#{$prefix}-#{$element}: #{$value};
+                }
+            }
+        }
+        @else {
             @media only screen and(max-width: $mobileBreakpoint) {
                 @each $element, $value in $elements {
                     --#{$prefix}-#{$element}: #{$value};

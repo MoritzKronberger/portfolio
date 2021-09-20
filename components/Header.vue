@@ -18,11 +18,12 @@ export default {
 
   header {
     grid-area: header;
-    padding: v(mrg-500) 0;
+    padding: v(mrg-header-top) 0;
     position: sticky;
     top: 0;
+    z-index: 1;
     background-color: $offWhite;
-  }
+    }
 
   .headContainer {
     display: flex;

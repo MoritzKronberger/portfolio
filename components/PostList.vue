@@ -32,6 +32,7 @@
 
 <style lang="scss" scoped>
     @import '@/assets/css/_shared';
+    @import '@/assets/css/media_queries';
 
     main {
         grid-area: main;
@@ -46,22 +47,23 @@
     ul {
         list-style-type: none;
         display: flex;
-        flex-direction: row;
+        flex-direction: v(clm-flex-direction);
         flex-wrap: wrap;
         justify-content: flex-start;
         align-items: flex-start;
-        flex-basis: calc(2 * (var(--clm-width) + var(--clm-gap)));
+        width: calc(2 * (var(--clm-width) + var(--clm-gap)));
     }
 
-    @media (orientation: portrait) {
+    @media only screen and(max-width: $mobileBreakpoint) {
         ul {
-           justify-content: center; 
+            align-items: center;
+            width: 100%;
         }
     }
 
     li {
-        flex-basis: v(clm-width);
-        margin: v(mrg-500) calc(.5 * var(--clm-gap));
+        width: v(clm-width);
+        margin: 0 calc(.5 * var(--clm-gap)) v(mrg-postList-items-bottom);
     }
 
     a {
@@ -76,7 +78,7 @@
 
     img {
         width: 100%;
-        margin: v(mrg-200) 0;
+        margin: 1rem 0;
     }
 
     p {

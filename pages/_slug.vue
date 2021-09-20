@@ -17,7 +17,7 @@
             const post = await $content('projects/markdown', params.slug).fetch();
             return { post }
         }
-    }
+    } 
 </script>
 
 <style lang="scss" scoped>
@@ -33,21 +33,19 @@
 
     article {
         flex-basis: calc(2 * (var(--clm-width) + var(--clm-gap)));
-        margin: 0 v(mrg-600);
+        margin: 0 v(mrg-global-sides);
     }
 
     h1 {
         @include font($code, huge);
-        margin: v(mrg-900) 0 0 0;
+        margin: v(mrg-slug-h1-top) 0 0;
     }
 
     .frontMatter {
         @include font($code, regular);
         list-style-type: none;
-        margin: v(mrg-600) 0;
+        margin: v(mrg-slug-frontMatter) 0;
     }
-
-    
 </style>
 
 <style lang="scss">
@@ -57,7 +55,10 @@
     .nuxt-content {
         h2 {
             @include font($code, big);
-            margin: v(mrg-300) 0 v(mrg-200);
+            margin: 1.2rem 0 .6rem;
+        }
+        h2:first-of-type {
+            margin-top: 0;
         }
     }
 </style>
