@@ -1,17 +1,28 @@
 <template>
   <footer>
       <div class="socialLinks">
-        <a href="https://github.com/MoritzKronberger/portfolio"><img src="../assets/icons/gitHub.png" alt="gitHub"></a>
-        <a href="https://de.linkedin.com/"><img src="../assets/icons/linkedIn.png" alt="linkedIn"></a>
+        <a href="https://github.com/MoritzKronberger/portfolio" 
+           v-html="rawGithubIcon"
+           title="Link to my GitHub profile">
+        </a>
+        <a href="https://de.linkedin.com/" 
+           v-html="rawLinkedinIcon"
+           title="Link to my LinkedIn page">
+        </a>
       </div>
       <p>© Moritz Kronberger 2021</p>
   </footer>
 </template>
 
 <script>
-export default {
+  import rawGithubIcon from "~/assets/icons/gitHub.svg?raw";
+  import rawLinkedinIcon from "~/assets/icons/linkedIn.svg?raw";
 
-}
+  export default {
+    data(){
+      return { rawGithubIcon, rawLinkedinIcon };
+    }
+  }
 </script>
 
 <style lang="scss" scoped>
@@ -42,8 +53,23 @@ export default {
     margin: 0 calc(var(--mrg-footer-between-socials) * .5);
     line-height: 0;
   }
+</style>
 
-  a > img {
-    height: v(mrg-footer-icon-size);
+<style lang="scss">
+  @import '@/assets/css/_shared';
+  .socialLinks {
+    svg {
+      height: v(mrg-footer-icon-size);
+    }
+
+    svg > path {
+      fill: $offBlack;
+    }
+
+    a:hover {
+      svg > path {
+        fill: $lightGrey;
+      }
+    }
   }
 </style>

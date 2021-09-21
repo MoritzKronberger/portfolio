@@ -1,7 +1,9 @@
 <template>
   <main>
       <article>
-        <img src="../assets/icons/self.png" alt="my logo">
+        <div v-html="rawSelfIcon" 
+             id="myIcon"
+             aria-hidden="true"/>
         <h2>Moritz Kronberger</h2>
         <p>Hi, I'm a 22 year old Interactive Media Bachelor's Student at the University of Applied Sciences in Augsburg.</p>
         <br>
@@ -11,16 +13,21 @@
 </template>
 
 <script>
-export default {
-  head() {
-    return {
-      title: 'About',
+  import rawSelfIcon from "~/assets/icons/self.svg?raw";
+
+  export default {
+    data () {
+      return { rawSelfIcon }
+    },
+    head() {
+      return {
+        title: 'About',
         meta: [
           { hid: 'desc-about', name: 'description', content: `My portfolio's about page.` }
         ]
+      }
     }
   }
-}
 </script>
 
 <style lang="scss" scoped>
@@ -45,9 +52,20 @@ export default {
     @include font($code, big);
     margin-bottom: v(mrg-about-h2-bottom);
   }
+</style>
 
-  img {
-    width: v(mrg-about-icon-width);
+<style lang="scss">
+  @import '@/assets/css/_shared';
+  
+  #myIcon {
+    line-height: 0;
     margin-bottom: v(mrg-about-icon-bottom);
+    svg {
+      width: v(mrg-about-icon-width);
+    }
+
+    svg > path {
+      fill: $offBlack;
+    }
   }
 </style>
