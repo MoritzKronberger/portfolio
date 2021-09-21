@@ -12,29 +12,33 @@ $offBlack: #222222;
 
 // simplified efficient font stack by:
 // https://gist.github.com/fabricelejeune/bcdd3d4725d4e4cea672
+
+$fontFamily-main: ('Atkinson Hyperlegible', 'Arial', sans-serif);
+$fontFamily-code: ('Roboto Mono', 'Courier New', monospace);
+
 $main: (
     huge: (
-        family: 'Atkinson Hyperlegible',
+        family: $fontFamily-main,
         weight: 700,
         size: v(fs-main-huge)
     ),
     big: (
-        family: 'Atkinson Hyperlegible',
+        family: $fontFamily-main,
         weight: 400,
         size: v(fs-main-big)
     ),
     regular: (
-        family: 'Atkinson Hyperlegible',
+        family: $fontFamily-main,
         weight: 400,
         size: v(fs-main-regular)
     ),
     small: (
-        family: 'Atkinson Hyperlegible',
+        family: $fontFamily-main,
         weight: 400,
         size: v(fs-main-small)
     ),
     tiny: (
-        family: 'Atkinson Hyperlegible',
+        family: $fontFamily-main,
         weight: 400,
         size: v(fs-main-tiny)
     )
@@ -42,27 +46,27 @@ $main: (
 
 $code: (
     huge: (
-        family: 'Roboto Mono',
+        family: $fontFamily-code,
         weight: 700,
         size: v(fs-code-huge)
     ),
     big: (
-        family: 'Roboto Mono',
+        family: $fontFamily-code,
         weight: 700,
         size: v(fs-code-big)
     ),
     regular: (
-        family: 'Roboto Mono',
+        family: $fontFamily-code,
         weight: 400,
         size: v(fs-code-regular)
     ),
     small: (
-        family: 'Roboto Mono',
+        family: $fontFamily-code,
         weight: 400,
         size: v(fs-code-small)
     ),
     tiny: (
-        family: 'Roboto Mono',
+        family: $fontFamily-code,
         weight: 400,
         size: v(fs-code-tiny)
     )
