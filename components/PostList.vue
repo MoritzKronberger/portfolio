@@ -32,7 +32,7 @@
 
 <style lang="scss" scoped>
     @import '@/assets/css/_shared';
-    @import '@/assets/css/media_queries';
+    @import '@/assets/css/breakpoints';
 
     main {
         grid-area: main;
@@ -54,7 +54,7 @@
         width: calc(2 * (var(--clm-width) + var(--clm-gap)));
     }
 
-    @media only screen and(max-width: $mobileBreakpoint) {
+    @media only screen and(max-width: map-get($breakpoints, mobile)) {
         ul {
             align-items: center;
             width: 100%;

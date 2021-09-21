@@ -1,3 +1,5 @@
+@use "sass:map";
+
 // font sizes for media queries
 $font-sizes: (
     main: (
@@ -156,31 +158,13 @@ $margins: (
     )
 );
 
-$mainCl-reg: map-get($main-columns , regular);
-$mainCl-tab: map-get($main-columns , tablet);
-
-$tabletBreakpoint: 2*(map-get($mainCl-reg, width) + 1.5 * map-get($mainCl-reg, gap));
-$mobileBreakpoint: 2*(map-get($mainCl-tab, width) + 1.5 * map-get($mainCl-tab, gap));
-
-@mixin setPropsFromMap($map, $prefix){
-    @each $size, $elements in $map {
-        @if $size == regular {
-            @each $element, $value in $elements {
-                --#{$prefix}-#{$element}: #{$value};
-            }
-        }@else if $size== tablet{
-            @media only screen and(max-width: $tabletBreakpoint) {
-                @each $element, $value in $elements {
-                    --#{$prefix}-#{$element}: #{$value};
-                }
-            }
-        }
-        @else {
-            @media only screen and(max-width: $mobileBreakpoint) {
-                @each $element, $value in $elements {
-                    --#{$prefix}-#{$element}: #{$value};
-                }
-            }
-        }
-    }
-}
+// specify custom property-maps to include 
+$customProps: (
+    fs-main: map-get($font-sizes, main),
+    fs-code: map-get($font-sizes, code),
+    clm: $main-columns,
+    hdc: $header-columns
+);
+@each $component, $sizes in $margins {
+    $customProps: map.set( $customProps, mrg-#{$component}, map-get($margins, #{$component}) );
+};
