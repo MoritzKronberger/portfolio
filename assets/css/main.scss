@@ -59,3 +59,11 @@ body {
 .fade-leave-active {
     animation: fadeOut .1s;
 }
+
+.slideDown-enter-active {
+    animation: fadeInDown .2s;
+}
+
+.slideDown-leave-active {
+    animation: fadeOutUP .1s;
+}

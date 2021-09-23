@@ -21,7 +21,8 @@ export default {
           { hid: 'desc-design', name: 'description', content: `List of my design projects` }
         ]
     }
-  }
+  }, 
+  transition: { name: 'slideDown', mode: "out-in" }
 }
 </script>
 

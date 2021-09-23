@@ -21,7 +21,8 @@ export default {
           { hid: 'compsci-portfolio', name: 'description', content: `List of my computer science projects` }
         ]
     }
-  }
+  }, 
+  transition: { name: 'slideDown', mode: "out-in" }
 }
 </script>
 
