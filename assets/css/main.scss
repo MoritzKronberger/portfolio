@@ -51,3 +51,11 @@ body {
     ;
     min-height: 100vh;
 }
+
+.fade-enter-active {
+    animation: fadeIn .15s;
+}
+
+.fade-leave-active {
+    animation: fadeOut .1s;
+}

@@ -26,7 +26,8 @@
           { hid: 'desc-about', name: 'description', content: `My portfolio's about page.` }
         ]
       }
-    }
+    }, 
+    transition: { name: 'fade', mode: "out-in" }
   }
 </script>
 

@@ -16,7 +16,8 @@
           { hid: 'desc-portfolio', name: 'description', content: `This is Moritz Kronberger's personal portfolio-website.` }
         ]
       }
-    }
+    }, 
+    transition: { name: 'zoom', mode: "out-in" }
   }
 </script>
 
@@ -60,5 +61,13 @@
     color: $offWhite;
     background-color: $offBlack;
     border: solid 3px $offBlack;
+  }
+
+  .zoom-enter-active {
+    animation: zoomIn .2s;
+  }
+
+  .zoom-leave-active {
+    animation: zoomOut .15s;
   }
 </style>

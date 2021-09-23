@@ -26,7 +26,8 @@
             let posts
             this.posts = await this.$content('projects/markdown').where({ category: this.category }).sortBy('created-At', 'desc').fetch()
             return { posts }
-        }
+        }, 
+        transition: { name: 'fade', mode: "out-in" }
     }
 </script>
 

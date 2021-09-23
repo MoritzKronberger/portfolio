@@ -24,7 +24,8 @@
                 { hid: `desc-${this.post.slug}`, name: 'description', content: this.post.meta_desc ? this.post.meta_desc : `${this.post.title}: One of my ${this.post.category} projects` }
             ]
             }
-        }
+        }, 
+        transition: { name: 'fade', mode: "out-in" }
     } 
 </script>
 
