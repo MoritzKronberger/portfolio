@@ -57,6 +57,7 @@
 
 <style lang="scss">
   @import '@/assets/css/_shared';
+
   .socialLinks {
     svg {
       height: v(mrg-footer-icon-size);
@@ -67,9 +68,19 @@
     }
 
     a:hover {
-      svg > path {
-        fill: $lightGrey;
+      svg {
+        animation: pinch .2s;
+        animation-fill-mode: both;
       }
+    }
+  }
+
+  @keyframes pinch {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(.93);
     }
   }
 </style>
