@@ -58,8 +58,8 @@
   }
 
   a:hover{
-    color: $offWhite;
-    background-color: $offBlack;
+    animation: fill .1s;
+    animation-fill-mode: both;
     border: solid 3px $offBlack;
   }
 
@@ -69,5 +69,16 @@
 
   .zoom-leave-active {
     animation: zoomOut .15s;
+  }
+
+  @keyframes fill {
+    from {
+      background-color: $offWhite;
+      color: $offBlack;
+    }
+    to {
+      color: $offWhite;
+      background-color: $offBlack;
+    }
   }
 </style>
