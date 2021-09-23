@@ -27,7 +27,7 @@
         ]
       }
     }, 
-    transition: { name: 'fade', mode: "out-in" }
+    transition: { name: 'slideDown', mode: "out-in" }
   }
 </script>
 
