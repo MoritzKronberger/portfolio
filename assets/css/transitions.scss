@@ -1,0 +1,23 @@
+.fade-enter-active {
+    animation: fadeIn .15s;
+}
+
+.fade-leave-active {
+    animation: fadeOut .1s;
+}
+
+.slideDown-enter-active {
+    animation: fadeInDown .2s;
+}
+
+.slideDown-leave-active {
+    animation: fadeOutUP .1s;
+}
+
+.zoom-enter-active {
+    animation: zoomIn .2s;
+}
+
+.zoom-leave-active {
+    animation: zoomOut .15s;
+}

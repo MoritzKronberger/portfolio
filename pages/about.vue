@@ -33,7 +33,8 @@
 
 <style lang="scss" scoped>
   @import '@/assets/css/_shared';
-
+  @import '@/assets/css/transitions';
+  
   main {
     grid-area: main;
 

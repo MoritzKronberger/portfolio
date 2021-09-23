@@ -23,6 +23,7 @@
 
 <style lang="scss" scoped>
   @import '@/assets/css/_shared';
+  @import '@/assets/css/transitions';
 
   main {
     grid-area: main;
@@ -61,14 +62,6 @@
     animation: fill .1s;
     animation-fill-mode: both;
     border: solid 3px $offBlack;
-  }
-
-  .zoom-enter-active {
-    animation: zoomIn .2s;
-  }
-
-  .zoom-leave-active {
-    animation: zoomOut .15s;
   }
 
   @keyframes fill {
