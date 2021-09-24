@@ -56,7 +56,7 @@ export default {
   $underlineWidth: 2px;
   $underlineSpeed: $speed400;
 
-  @include hoverUnderline("a", $underlineWidth, 50%, $offBlack, $underlineSpeed);
+  @include hoverUnderline("a", $underlineWidth, 92%, 50%, $offBlack, $underlineSpeed);
 
   .nuxt-link-exact-active {
     background-size: 100% $underlineWidth;

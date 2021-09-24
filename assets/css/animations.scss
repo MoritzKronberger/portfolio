@@ -8,12 +8,12 @@
 }
 
 // animated underline by https://nickymeuleman.netlify.app/blog/css-animated-wrapping-underline
-@mixin hoverUnderline ($element, $height, $origin, $color, $speed){
+@mixin hoverUnderline ($element, $height, $pos, $origin, $color, $speed){
     $element: unquote($element);
 
     #{$element} {
         background-image: linear-gradient($color, $color);
-        background-position: $origin 100%;
+        background-position: $origin $pos;
         background-repeat: no-repeat;
         background-size: 0 $height;
         transition: background-size $speed linear;
