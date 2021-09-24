@@ -17,13 +17,16 @@
         ]
       }
     }, 
-    transition: { name: 'zoom', mode: "out-in" }
+    transition(to) {
+      if(to.name === 'index'){
+        return {name: 'zoom', appear: true }
+      }
+    }
   }
 </script>
 
 <style lang="scss" scoped>
   @import '@/assets/css/_shared';
-  @import '@/assets/css/transitions';
 
   main {
     grid-area: main;

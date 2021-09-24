@@ -24,14 +24,12 @@
                 { hid: `desc-${this.post.slug}`, name: 'description', content: this.post.meta_desc ? this.post.meta_desc : `${this.post.title}: One of my ${this.post.category} projects` }
             ]
             }
-        }, 
-        transition: { name: 'slideDown', mode: "out-in" }
+        }
     } 
 </script>
 
 <style lang="scss" scoped>
     @import '@/assets/css/_shared';
-    @import '@/assets/css/transitions';
     
     main {
         grid-area: main;

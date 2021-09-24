@@ -24,6 +24,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/css/main',
+        '~/assets/css/transitions',
         'animate.css/animate.compat.css'
   ],
 
@@ -56,5 +57,10 @@ export default {
   build: {
   },
 
-  loading: false
+  loading: false,
+
+  pageTransition: { 
+    name: 'slideDown',
+    appear: true
+  }
 }
