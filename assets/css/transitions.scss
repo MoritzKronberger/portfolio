@@ -1,23 +1,25 @@
+@import '@/assets/css/_shared';
+
 .fade-enter-active {
-    animation: fadeIn .15s;
+    animation: fadeIn $speed400;
 }
 
 .fade-leave-active {
-    animation: fadeOut .1s;
+    animation: fadeOut $speed300;
 }
 
 .slideDown-enter-active {
-    animation: fadeInDown .2s;
+    animation: fadeInDown $speed500;
 }
 
 .slideDown-leave-active {
-    animation: fadeOutUP .1s;
+    animation: fadeOutUP $speed300;
 }
 
 .zoom-enter-active {
-    animation: zoomIn .2s;
+    animation: zoomIn $speed500;
 }
 
 .zoom-leave-active {
-    animation: zoomOut .15s;
+    animation: zoomOut $speed400;
 }
