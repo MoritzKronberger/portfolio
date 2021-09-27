@@ -2,19 +2,31 @@
   <header>
     <div class="headContainer">
       <span class="linkWrapper">
-        <NuxtLink to="/">Home</NuxtLink>
+        <NuxtLink to="/" class="nuxtLink">Home</NuxtLink>
       </span>
       <span class="linkWrapper">
-        <NuxtLink to="/about">About</NuxtLink>
+        <NuxtLink to="/about" class="nuxtLink">About</NuxtLink>
       </span>
     </div>
   </header>
 </template>
 
 <script>
-export default {
-
-}
+  export default {
+    mounted () {
+      const nuxtLinks = document.getElementsByClassName("nuxtLink")
+      for(let link of nuxtLinks){
+        link.onmouseover = function(){
+          const activeNuxtLink = document.getElementsByClassName("nuxt-link-exact-active")[0]
+          activeNuxtLink ? activeNuxtLink.classList.add("noUnderline") : ''
+        }
+        link.onmouseout  = function(){
+          const activeNuxtLink = document.getElementsByClassName("nuxt-link-exact-active")[0]
+          activeNuxtLink ? activeNuxtLink.classList.remove("noUnderline") : ''
+        }
+      }
+    }
+  }
 </script>
 
 <style lang="scss" scoped>
@@ -63,13 +75,8 @@ export default {
     transition: background-size $underlineSpeed linear;
   }
 
-  // remove underline from active nuxt link when hovering over header
-  .headContainer:hover .nuxt-link-exact-active {
+  .noUnderline {
     background-size: 0 $underlineWidth;
     transition: background-size $underlineSpeed linear;
-    &:hover {
-      background-size: 100% $underlineWidth;
-      transition: background-size $underlineSpeed linear;
-    }
   }
 </style>
