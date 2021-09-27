@@ -17,14 +17,9 @@
 
   export default {
     data () {
-      return { rawSelfIcon }
-    },
-    head() {
-      return {
-        title: 'About',
-        meta: [
-          { hid: 'desc-about', name: 'description', content: `My portfolio's about page.` }
-        ]
+      return { 
+        rawSelfIcon,
+        metaName: 'about'
       }
     }
   }

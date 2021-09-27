@@ -10,15 +10,8 @@ export default {
   },
   data(){
     return {
-      category: 'design'
-    }
-  },
-  head() {
-    return {
-      title: 'Design',
-        meta: [
-          { hid: 'desc-design', name: 'description', content: `List of my design projects` }
-        ]
+      category: 'design',
+      metaName: 'design'
     }
   }
 }

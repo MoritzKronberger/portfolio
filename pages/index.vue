@@ -9,17 +9,14 @@
 
 <script>
   export default {
-    head() {
-      return {
-        title: 'Portfolio',
-        meta: [
-          { hid: 'desc-portfolio', name: 'description', content: `This is Moritz Kronberger's personal portfolio-website.` }
-        ]
-      }
-    }, 
     transition(to) {
       if(to.name === 'index'){
         return {name: 'zoom', appear: true }
+      }
+    },
+    data() {
+      return {
+        metaName: 'index'
       }
     }
   }

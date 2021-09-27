@@ -10,15 +10,8 @@ export default {
   },
   data(){
     return {
-      category: 'compsci'
-    }
-  },
-  head() {
-    return {
-      title: 'CompSci',
-        meta: [
-          { hid: 'compsci-portfolio', name: 'description', content: `List of my computer science projects` }
-        ]
+      category: 'compsci',
+      metaName: 'compsci'
     }
   }
 }
