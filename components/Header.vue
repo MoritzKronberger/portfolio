@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <nav>
     <div class="headContainer">
       <span class="linkWrapper">
         <NuxtLink to="/" class="nuxtLink">Home</NuxtLink>
@@ -8,7 +8,7 @@
         <NuxtLink to="/about" class="nuxtLink">About</NuxtLink>
       </span>
     </div>
-  </header>
+  </nav>
 </template>
 
 <script>
@@ -33,7 +33,7 @@
   @import '@/assets/css/_shared';
   @import '@/assets/css/animations';
 
-  header {
+  nav {
     grid-area: header;
     padding: v(mrg-header-top) 0;
     position: sticky;

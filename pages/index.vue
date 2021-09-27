@@ -1,9 +1,9 @@
 <template>
   <main>
-    <div class="linkContainer">
+    <article class="linkContainer">
       <NuxtLink to="/design" id="firstLink">Design</NuxtLink>
       <NuxtLink to="/compsci">CompSci</NuxtLink>
-    </div>
+    </article>
   </main>
 </template>
 
