@@ -54,7 +54,6 @@
     margin: 0 calc(var(--hdc-gap) * 0.5);
     display: flex;
     justify-content: center;
-    //align-items: center;
   }
 
   a {
@@ -64,7 +63,7 @@
     text-align: center;
   }
 
-  //underline animation
+  //animated underline:
   $underlineWidth: 2px;
   $underlineSpeed: $speed400;
 

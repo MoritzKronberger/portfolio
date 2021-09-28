@@ -59,7 +59,7 @@
 </style>
 
 <style lang="scss">
-    // styling content generated from .md-files
+    // style content generated from .md-files:
     @import '@/assets/css/_shared';
 
     .nuxt-content {

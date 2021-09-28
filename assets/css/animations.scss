@@ -7,7 +7,8 @@
     }
 }
 
-// animated underline by https://nickymeuleman.netlify.app/blog/css-animated-wrapping-underline
+// animated underline by 
+// https://nickymeuleman.netlify.app/blog/css-animated-wrapping-underline
 @mixin hoverUnderline ($element, $height, $pos, $origin, $color, $speed){
     $element: unquote($element);
 

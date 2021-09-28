@@ -3,7 +3,7 @@
 $mainCl-reg: map-get($main-columns , regular);
 $mainCl-tab: map-get($main-columns , tablet);
 
-// specify breakpoints to use
+// specify which breakpoints to use
 $breakpoints: (
     tablet: 2*(map-get($mainCl-reg, width) + 1.5 * map-get($mainCl-reg, gap)),
     mobile: 2*(map-get($mainCl-tab, width) + 1.5 * map-get($mainCl-tab, gap))
