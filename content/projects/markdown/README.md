@@ -14,7 +14,7 @@
 
 The full supported front matter looks like the following:
 
-```
+```md
 ---
 title: post title
 description: descriptive tags
