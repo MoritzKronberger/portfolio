@@ -1,11 +1,11 @@
 <template>
   <footer>
       <div class="socialLinks">
-        <a href="https://github.com/MoritzKronberger/portfolio" 
+        <a href="https://github.com/MoritzKronberger" 
            v-html="rawGithubIcon"
            title="Link to my GitHub profile">
         </a>
-        <a href="https://de.linkedin.com/" 
+        <a href="https://www.linkedin.com/in/moritz-kronberger-a17211222/" 
            v-html="rawLinkedinIcon"
            title="Link to my LinkedIn page">
         </a>
