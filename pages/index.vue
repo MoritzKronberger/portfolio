@@ -59,7 +59,7 @@
   }
 
   a:hover{
-    animation: fill .1s;
+    animation: fill $speed300;
     animation-fill-mode: both;
     border: solid 3px $offBlack;
   }
