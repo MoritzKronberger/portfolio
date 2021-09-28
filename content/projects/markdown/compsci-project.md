@@ -1,32 +1,20 @@
 ---
-title: ReadMe
-description: ReadMe ist eine Anwendung, die ihre User zu einer bewussteren Interaktion mit Text bewegt. Als Museumsinstallation bringt sie dem Nutzer in ca. 1000 Zeichen die Grundinformationen zum NSA-Spionageskandal von 2013 näher.
+title: CompSci Placeholder
+description: compsci placeholder tags
 category: compsci
-meta_desc: Interaction design casestudy expoloring attention span and information overload with a strong focus on storytelling
-date: winter 2020/21
-team: solo
+meta_desc: Placeholder project, please ignore
+date: 2020-12-31
+team: 5 people
 ---
 
-## Hintergrund
+## Chapter 1
 
-Wie unaufmerksam unsere Interaktionen mit Text oftmals sein können, weiß wohl jeder, der sich selbst schon einmal selbst beim völlig gedankenlosen Scrollen durch Schlagzeilen oder Social Media erwischt hat.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-Aber auch im Analogen zeigen z.B. Museen, welchen Einfluss “Information Overload” auf unserer Aufnahmefähigkeit hat.
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet.
 
-In Anbetracht der kurzen Zeit eines Museumsbesuchs und der dabei zu vermittelnden Fülle an Wissen ist es kaum verwunderlich, dass selbst die kürzesten Texte von Besuchern in der Regel bestenfalls knapp überflogen werden.
+## Chapter 2
 
-Und auch wenn dieses Leseverhalten in der Natur einer Ausstellung liegt, ergibt sich die Problematik, dass diese äußerst oberflächlichen Interaktionen bestimmten Themen kaum gerecht werden können.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-## Konzept
-
-ReadMe verknüpft daher das Lesen mit dem Prinzip von Beschädigung und Regeneration.
-
-Streicht der Nutzer beim Lesen unter den Worten entlang, so werden diese zunächst durch Verschlüsselung unkenntlich.
-
-Sobald allerdings der gesamte Text gelesen/ verschlüsselt wurde, löst sich die Verschlüsselung auf, um den nachfolgenden Textabschnitt freizugeben.
-
-ReadMe erhöht somit die Komplexität der Interaktion des Lesensum diese dafür bewusster zu gestalten und der Ungeduld des Lesers entgegenzuwirken.
-
-Inhaltlich beschäftigt sich ReadMe mit den Leaks Edward Snowdens und dem daraus entstandenen NSA Spionageskandal von 2013.
-
-Angepasst an die Schnelllebigkeit des Museumskontextes wird ein grober Überblick über das Thema priorisiert und der Text in drei kurze Abschnitte unterteilt.
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu.
