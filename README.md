@@ -19,6 +19,10 @@ $ npm run generate
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
+## Creating Project Entries
+
+For more information about the rules for project entries check out the dedicated readmes for both the [markdown](./content/projects/markdown/README.md) and [thumbnails](./content/projects/assets/images/thumbnails/README.md).
+
 ## Special Directories
 
 You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
@@ -33,6 +37,12 @@ More information about the usage of this directory in [the documentation](https:
 
 The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
 
+More information about the usage of this directory in [the documentation](https://content.nuxtjs.org/).
+
+### `content`
+
+The content directory contains the directories and data for use with the Nuxt Content module.
+
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
 
 ### `layouts`
@@ -40,7 +50,6 @@ More information about the usage of this directory in [the documentation](https:
 Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
 
 ### `pages`
 
