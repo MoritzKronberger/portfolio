@@ -5,8 +5,8 @@
                 <li v-for="post of posts" :key="post.slug">
                 <NuxtLink :to="{ name: 'slug', params: { slug: post.slug } }">
                     <h2 class="postTitle">{{ post.title }}</h2>
-                    <img :src="require(`../content/projects/assets/images/thumbnails/${post.slug}.png`)" alt="post thumbnail">
-                    <p>{{post.description}}</p>
+                    <img :src="require(`../content/projects/assets/images/thumbnails/${post.slug}.png`)" :alt="post.title + ' thumbnail'">
+                    <p>{{post.tags}}</p>
                 </NuxtLink>
                 </li>
             </ul>
@@ -24,7 +24,7 @@
         props: ['category'],
         async fetch(){
             let posts
-            this.posts = await this.$content('projects/markdown').where({ category: this.category }).sortBy('created-At', 'desc').fetch()
+            this.posts = await this.$content('projects/markdown').where({ category: this.category }).sortBy('date', 'desc').fetch()
             return { posts }
         }
     }
