@@ -5,9 +5,9 @@
              id="myIcon"
              aria-hidden="true"/>
         <h2>Moritz Kronberger</h2>
-        <p>Hi, I'm a 22 year old Interactive Media Bachelor's Student at the University of Applied Sciences in Augsburg.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.</p>
         <br>
-        <p>I love to code and create interesting and appealing interactions with digital media.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.</p>
       </article>
   </main>
 </template>
