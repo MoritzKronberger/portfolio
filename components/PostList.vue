@@ -4,7 +4,7 @@
             <ul>
                 <li v-for="post of posts" :key="post.slug">
                 <NuxtLink :to="{ name: 'slug', params: { slug: post.slug } }">
-                    <p id="postTitle">{{ post.title }}</p>
+                    <h2 class="postTitle">{{ post.title }}</h2>
                     <img :src="require(`../content/projects/assets/images/thumbnails/${post.slug}.png`)" alt="post thumbnail">
                     <p>{{post.description}}</p>
                 </NuxtLink>
@@ -42,6 +42,7 @@
         display: flex;
         justify-content: center;
         align-items: flex-start;
+        margin-top: v(mrg-global-top);
     }
 
     ul {
@@ -72,8 +73,8 @@
         text-decoration: none;
     }
 
-    #postTitle {
-        @include font($code, regular);
+    .postTitle {
+        @include font($main, regular);
     }
 
     img {
@@ -82,6 +83,7 @@
     }
 
     p {
+        @include font($code, regular);
         text-align: justify;
     }
 </style>

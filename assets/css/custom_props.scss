@@ -28,11 +28,10 @@ $font-sizes: (
             tiny: .45
         ),
         tablet: (
-            huge: 3.5rem,
             big: 1.125rem,
         ),
         mobile: (
-            huge: 3.5rem,
+            huge: 2.75rem,
             big: 1rem,
         )
     )
@@ -82,7 +81,11 @@ $header-columns: (
 $margins: (
     global: (
         regular: (
-            sides: 2.25rem
+            sides: 2.25rem,
+            top: 1.25rem
+        ),
+        mobile: (
+            top: 0
         )
     ),
     header: (
@@ -119,7 +122,7 @@ $margins: (
         regular: (
             bottom: 12%,
             icon-width: 2rem,
-            icon-bottom: 2.5rem,
+            icon-bottom: 2.25rem,
             h2-bottom: 2rem
         ),
         tablet: (
