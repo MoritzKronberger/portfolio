@@ -43,18 +43,21 @@ $main-columns: (
         width: 360px,
         height: 120px,
         gap: 290px,
-        flex-direction: row
+        flex-direction: row,
+        article-width: 2 * 360px + .5 * 290px
     ),
     tablet: (
         width: 224px,
         height: 80px,
-        gap: 128px
+        gap: 128px,
+        article-width: 2 * (224px + 128px)
     ),
     mobile: (
         width: 224px,
         height: 64px,
         gap: 2.25rem,
-        flex-direction: column
+        flex-direction: column,
+        article-width: 2 * (224px + 36px)
     )
 );
 

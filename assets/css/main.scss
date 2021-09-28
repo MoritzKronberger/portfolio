@@ -40,6 +40,16 @@ body {
     @include font($main, regular);
 }
 
+::selection {
+    background: $offBlack;
+    color: $offWhite;
+}
+
+::-moz-selection {
+    background: $offBlack;
+    color: $offWhite;
+}
+
 .bodyDiv {
     display: grid;
     grid-template-columns: 1fr;

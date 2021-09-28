@@ -40,7 +40,7 @@
     }
 
     article {
-        flex-basis: calc(2 * (var(--clm-width) + var(--clm-gap)));
+        flex-basis: v(clm-article-width);
         margin: 0 v(mrg-global-sides);
     }
 
