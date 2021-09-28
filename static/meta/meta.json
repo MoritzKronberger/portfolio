@@ -2,21 +2,21 @@
     "index": {
         "title": "Portfolio",
         "hid": "desc-portfolio",
-        "content": "This is Moritz Kronberger's personal portfolio-website."
+        "content": "My personal portfolio featuring some of my latest computer science and design projects"
     },
     "about": {
         "title": "About",
         "hid": "desc-about",
-        "content": "My portfolio's about page."
+        "content": "About myself"
     },
     "compsci": {
         "title": "CompSci",
         "hid": "desc-compsci",
-        "content": "List of my computer science projects"
+        "content": "My latest computer science projects"
     },
     "design": {
         "title": "Design",
         "hid": "desc-design",
-        "content": "List of my design projects"
+        "content": "My latest design projects"
     }
 }
