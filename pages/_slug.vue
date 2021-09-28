@@ -3,8 +3,10 @@
         <article>
             <h1>{{ post.title }}</h1>
             <ul class="frontMatter">
-                <li>Date: {{post.date}}</li>
-                <li>Team: {{post.team}}</li>
+                <li>Date: {{post.date | longMonth_numericYear}}</li>
+                <li v-if="post.tech">Tech: {{post.tech}}</li>
+                <li v-if="post.team">Team: {{post.team}}</li>
+                <li v-if="post.role && post.team">Role: {{post.role}}</li>
             </ul>
             <nuxt-content :document="post" />
         </article>

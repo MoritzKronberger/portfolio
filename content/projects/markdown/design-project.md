@@ -1,10 +1,10 @@
 ---
 title: Design Placeholder
-description: design placeholder tags
+tags: design placeholder tags
+date: 2021-09-28
 category: design
 meta_desc: Placeholder project, please ignore
-date: 2021-09-28
-team: 2 people
+tech: Figma Photoshop Illustrator
 ---
 
 ## Chapter 1

@@ -1,10 +1,12 @@
 ---
 title: CompSci Placeholder
-description: compsci placeholder tags
+tags: compsci placeholder tags
+date: 2020-12-31
 category: compsci
 meta_desc: Placeholder project, please ignore
-date: 2020-12-31
+tech: Nuxt-Content Nuxt Vue Sass Netlify
 team: 5 people
+role: Frontend
 ---
 
 ## Chapter 1
