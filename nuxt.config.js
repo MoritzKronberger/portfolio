@@ -29,7 +29,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['~plugins/meta', 
-            '~plugins/date_filter'
+            '~plugins/date_filter',
+            '~plugins/hide_on_scrolldown'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
