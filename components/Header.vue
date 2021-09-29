@@ -14,17 +14,22 @@
 <script>
   export default {
     mounted () {
+      // remove underline from nuxt-link-exact-active when hovering over other nav link
       const nuxtLinks = document.getElementsByClassName("nuxtLink")
       for(let link of nuxtLinks){
-        link.onmouseover = function(){
+        link.onmouseover = () => {
           const activeNuxtLink = document.getElementsByClassName("nuxt-link-exact-active")[0]
           activeNuxtLink ? activeNuxtLink.classList.add("noUnderline") : ''
         }
-        link.onmouseout  = function(){
+        link.onmouseout  = () => {
           const activeNuxtLink = document.getElementsByClassName("nuxt-link-exact-active")[0]
           activeNuxtLink ? activeNuxtLink.classList.remove("noUnderline") : ''
         }
       }
+
+      // hide navbar on scroll down
+      const navBar = document.getElementsByTagName("nav")[0]
+      this.$hideOnScrolldown(() => {navBar.style.top = `-${navBar.offsetHeight}px`},() => {navBar.style.top = "0"})
     }
   }
 </script>
@@ -40,7 +45,8 @@
     top: 0;
     z-index: 1;
     background-color: $offWhite;
-    }
+    transition: top $speed700 ease-in-out;
+  }
 
   .headContainer {
     display: flex;
