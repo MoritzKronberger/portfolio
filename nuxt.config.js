@@ -50,12 +50,33 @@ export default {
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
 
+  hooks: {
+    // replace markdown image syntax with reference to global ContentImg-Vue-component
+    'content:file:beforeParse': (file) => {
+      const trimPrefix = '..'
+      function replaceImage (match, p1, p2) {
+        const fileExtension = p2.split('.')[p2.split('.').length-1]; 
+        p2 = p2.replace(trimPrefix,'')
+        return ['png', 'jpg', 'jpeg', 'webp'].includes(fileExtension) ? `<content-img src="${p2}" alt="${p1}"></content-img>` : match 
+      } 
+      file.data = file.data.replace(/!\[(.*?)\]\((.*?)\)/g, replaceImage)
+      return file.data 
+    }
+  },
+
   // Svg module configuration: https://github.com/nuxt-community/svg-module
   svg: {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    // webpack ignore .md files from: https://github.com/nuxt/content/issues/106#issuecomment-666283547
+    extend(config, { isDev, isClient }) {
+      config.module.rules.push({
+        test: /\.md$/i,
+        loader: 'ignore-loader'
+      })
+    }
   },
 
   loading: false,
