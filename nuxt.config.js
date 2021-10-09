@@ -53,14 +53,25 @@ export default {
   hooks: {
     // replace markdown image syntax with reference to global ContentImg-Vue-component
     'content:file:beforeParse': (file) => {
-      const trimPrefix = '..'
-      function replaceImage (match, p1, p2) {
-        const fileExtension = p2.split('.')[p2.split('.').length-1]; 
-        p2 = p2.replace(trimPrefix,'')
-        return ['png', 'jpg', 'jpeg', 'webp'].includes(fileExtension) ? `<content-img src="${p2}" alt="${p1}"></content-img>` : match 
-      } 
-      file.data = file.data.replace(/!\[(.*?)\]\((.*?)\)/g, replaceImage)
-      return file.data 
+      if(file.extension === '.md'){
+        function replaceImage (match, p1, p2) {
+          const referencedFileExtension = p2.split('.')[p2.split('.').length-1]; 
+          if(['png', 'jpg', 'jpeg', 'webp'].includes(referencedFileExtension)){
+            const relativeDirectory = '..'
+            const baseDirectory = 'content'
+            // split on / or \ or multiples (path formatting can change on dev server restart)
+            const baseFilePath = file.path.split(/(?:\/|\\)/)
+            const subDirectory = baseFilePath[baseFilePath.indexOf(baseDirectory)+1]
+            p2 = p2.replace(relativeDirectory, subDirectory)
+            return `<content-img src="${p2}" alt="${p1}"></content-img>`
+          } else {
+            return match
+          }
+        } 
+        // matches markdown image syntax ![p1](p2)
+        file.data = file.data.replace(/!\[(.*?)\]\((.*?)\)/g, replaceImage)
+        return file.data 
+      }
     }
   },
 
