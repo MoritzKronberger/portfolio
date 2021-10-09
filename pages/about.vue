@@ -4,10 +4,10 @@
         <div v-html="rawSelfIcon" 
              id="myIcon"
              aria-hidden="true"/>
-        <h2>Moritz Kronberger</h2>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.</p>
+        <h2>Hi, I'm Moritz</h2>
+        <p>As a Bachelor's student of Interactive Media at the University of Applied Sciences Ausgburg I love to code and create meaningful human machine interactions.</p>
         <br>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.</p>
+        <p>While design is central to all my projects, my focus is on the technical side of bringing interactive experiences to life.</p>
       </article>
   </main>
 </template>
@@ -40,6 +40,9 @@
   article {
     flex-basis: v(clm-width);
     margin-bottom: v(mrg-about-bottom);
+  }
+
+  p {
     text-align: justify;
   }
 
@@ -55,6 +58,7 @@
   #myIcon {
     line-height: 0;
     margin-bottom: v(mrg-about-icon-bottom);
+    
     svg {
       width: v(mrg-about-icon-width);
     }
