@@ -1,4 +1,4 @@
-# Post thubnails
+# Post thumbnails
 
 ## Naming
 
