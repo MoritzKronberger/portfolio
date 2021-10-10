@@ -80,6 +80,13 @@
     img {
         width: 100%;
         margin: 1rem 0;
+        filter: grayscale(1);
+        transition: filter $speed500;
+    }
+
+    img:hover {
+        filter: grayscale(0);
+        transition: filter $speed500;
     }
 
     p {
