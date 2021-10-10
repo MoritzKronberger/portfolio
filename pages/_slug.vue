@@ -7,6 +7,13 @@
                 <li v-if="post.tech">Tech: {{post.tech}}</li>
                 <li v-if="post.team">Team: {{post.team}}</li>
                 <li v-if="post.role && post.team">Role: {{post.role}}</li>
+                <li v-if="post.repo">
+                    Code: 
+                    <span v-for="(link, name, index) of post.repo" :key="name">
+                        <span v-if="index !== 0">, </span>
+                        <a :href="link">{{name}}</a>
+                    </span>
+                </li>
             </ul>
             <nuxt-content :document="post" />
         </article>
@@ -56,6 +63,12 @@
         list-style-type: none;
         margin: v(mrg-slug-frontMatter) 0;
     }
+
+    a {
+        color: $offBlack;
+        text-decoration: underline 1px;
+        text-underline-offset: 2px;
+    }
 </style>
 
 <style lang="scss">
@@ -67,16 +80,25 @@
             @include font($code, big);
             margin: 1.2rem 0 .6rem;
         }
+        
         h2:first-of-type {
             margin-top: 0;
         }
+
         img {
             display: block;
             width: 100%;
             margin: 0 auto;
         }
+
         p + img, img + p {
             margin-top: v(mrg-global-small);
+        }
+
+        a {
+            color: $offBlack;
+            text-decoration: underline 1px;
+            text-underline-offset: 2px;
         }
     }
 </style>
