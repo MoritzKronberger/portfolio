@@ -4,9 +4,9 @@
             <ul>
                 <li v-for="post of posts" :key="post.slug">
                 <NuxtLink :to="{ name: 'slug', params: { slug: post.slug } }">
-                    <h2 class="postTitle">{{ post.title }}</h2>
                     <img :src="require(`../content/projects/assets/images/thumbnails/${post.slug}.png`)" :alt="post.title + ' thumbnail'">
-                    <p>{{post.tags}}</p>
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.tags }}</p>
                 </NuxtLink>
                 </li>
             </ul>
@@ -63,34 +63,51 @@
     }
 
     li {
-        width: v(clm-width);
         margin: 0 calc(.5 * var(--clm-gap)) v(mrg-postList-items-bottom);
     }
 
     a {
+        position: relative;
+        width: v(clm-width);
+        height: v(clm-width);
+        display: inline-block;
         @include font($main, regular);
         color: $offBlack;
         text-decoration: none;
     }
 
-    .postTitle {
+    h2 {
         @include font($main, regular);
-    }
-
-    img {
-        width: 100%;
-        margin: 1rem 0;
-        filter: grayscale(1);
-        transition: filter $speed500;
-    }
-
-    img:hover {
-        filter: grayscale(0);
-        transition: filter $speed500;
+        top: 0;
     }
 
     p {
         @include font($code, regular);
-        text-align: justify;
+        bottom: 0;
+    }
+
+    h2, p {
+        position: absolute;
+        margin: 1rem 1rem;
+        filter: opacity(1);
+        transition: filter $speed500;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(1) opacity(.6);
+        transition: filter $speed500;
+    }
+
+    img:hover {
+        filter: grayscale(0) opacity(1);
+        transition: filter $speed500;
+    }
+
+    a:hover h2, a:hover p {
+        filter: opacity(0);
+        transition: filter $speed500;
     }
 </style>
