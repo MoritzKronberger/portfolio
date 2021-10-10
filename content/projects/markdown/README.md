@@ -12,6 +12,8 @@
 
 All front matter variables not included in the requirements are optional, however a custom **meta_desc** should be included for SEO.
 
+If a repo variable is added, the repository/ repositories must be listed in object format, as shown below.
+
 The full supported front matter looks like the following:
 
 ```txt
@@ -24,5 +26,6 @@ meta_desc: custom meta decription
 tech: technologies used
 team: team size
 role: role in the team
+repo: {Repo1: repo-link, Repo2: repo-link}
 ---
 ```

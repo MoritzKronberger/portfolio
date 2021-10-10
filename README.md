@@ -21,7 +21,7 @@ For detailed explanation on how things work, check out the [documentation](https
 
 ## Creating Project Entries
 
-For more information about the rules for project entries check out the dedicated readmes for both the [markdown](./content/projects/markdown/README.md) and [thumbnails](./content/projects/assets/images/thumbnails/README.md).
+For more information about the rules for project entries check out the dedicated readmes for both the [markdown](./content/projects/markdown/README.md) and [thumbnails](./content/projects/assets/images/README.md).
 
 Changes to the project entries should be commited to the **publish** branch to quickly be merged into the **main** branch and deployed using the command:
 
