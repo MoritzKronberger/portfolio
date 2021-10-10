@@ -124,15 +124,16 @@ $margins: (
     ),
     about: (
         regular: (
-            bottom: 12%,
+            bottom: 11%,
             icon-width: 2rem,
             icon-bottom: 2.25rem,
             h2-bottom: 2rem
         ),
         tablet: (
+            bottom: 4%,
             icon-width: 1.75rem,
-            icon-bottom: 1.5rem,
-            h2-bottom: 1.5rem
+            icon-bottom: 1.65rem,
+            h2-bottom: 1.3rem
         ),
         mobile: (
             bottom: 16%,
