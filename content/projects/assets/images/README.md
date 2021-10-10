@@ -11,7 +11,7 @@
 ### Sizing
 
 1. The thumbnail width should be 800 pixels
-2. A square or portrait aspect ratio is preferable
+2. A square aspect ratio is preferable
 
 ## Post images
 
