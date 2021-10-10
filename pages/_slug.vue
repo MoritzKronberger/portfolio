@@ -70,5 +70,13 @@
         h2:first-of-type {
             margin-top: 0;
         }
+        img {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+        }
+        p + img, img + p {
+            margin-top: v(mrg-global-small);
+        }
     }
 </style>
