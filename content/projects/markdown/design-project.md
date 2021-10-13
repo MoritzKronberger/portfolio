@@ -5,6 +5,7 @@ date: 2021-09-28
 category: design
 meta_desc: Placeholder project, please ignore
 tech: Figma Photoshop Illustrator
+team: {John Doe: https://www.linkedin.com/company/john-doe/, Jane Doe: https://www.linkedin.com/in/jane-doe-27803b188/?originalSubdomain=de}
 ---
 
 ## Chapter 1

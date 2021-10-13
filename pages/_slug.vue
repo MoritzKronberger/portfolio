@@ -5,7 +5,13 @@
             <ul class="frontMatter">
                 <li>Date: {{post.date | longMonth_numericYear}}</li>
                 <li v-if="post.tech">Tech: {{post.tech}}</li>
-                <li v-if="post.team">Team: {{post.team}}</li>
+                <li v-if="post.team">
+                    Team: 
+                    <span v-for="(link, member, index) of post.team" :key="member">
+                        <span v-if="index !== 0">, </span>
+                        <a :href="link">{{member}}</a>
+                    </span>
+                </li>
                 <li v-if="post.role && post.team">Role: {{post.role}}</li>
                 <li v-if="post.repo">
                     Code: 
