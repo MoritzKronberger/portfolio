@@ -14,7 +14,6 @@ export default {
         }
     },
     methods: {
-        // TODO: Why is '~content/projects' required as an explicit string in order for webpack to work?
         imgSrc() {
             return require(`~/content/${this.src}`)
         }

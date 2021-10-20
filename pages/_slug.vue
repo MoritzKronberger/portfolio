@@ -21,6 +21,11 @@
                     </span>
                 </li>
             </ul>
+            <Carousel :path="post.slug" :slides="this.carouselResources.length" v-slot="{ currentSlide }">
+                <carousel-slide v-for="(img, index) of carouselResources" :key="img" transition-name="slideHorizontal" :slide-index="index">
+                    <img v-show="index === currentSlide" :src="img" :alt="post.slug">
+                </carousel-slide>
+            </Carousel>
             <nuxt-content :document="post" />
         </article>
     </main>
@@ -31,6 +36,30 @@
         async asyncData({ $content, params }){
             const post = await $content('projects/markdown', params.slug).fetch();
             return { post }
+        },
+        data (){
+            return {
+                carouselResources: []
+            }
+        },
+        mounted() {
+            this.loadResources(require.context(`~/content/projects/assets/images`, true, /carousel/))
+            let filter = []
+            for (const img of this.carouselResources) {
+                const splitPath = img.split('/')
+                const path = splitPath[splitPath.indexOf('carousel')-1]
+                if (path != this.post.slug){
+                    filter.push(img)
+                }
+            }
+            for (const img of filter){
+                this.carouselResources.pop(img)
+            }
+        },
+        methods: {
+            loadResources(r) {
+                r.keys().forEach((key) => (this.carouselResources.push(r(key))))
+            }
         },
         head() {
             return {

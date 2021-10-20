@@ -15,3 +15,11 @@
 .zoom-leave-active {
     animation: fadeOut $speed300;
 }
+
+.slideHorizontal-enter-active {
+    animation: slideInLeft $speed300;
+}
+
+.slideHorizontal-leave-active {
+    animation: slideOutRight $speed300;
+}
