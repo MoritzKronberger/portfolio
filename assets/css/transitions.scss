@@ -16,10 +16,18 @@
     animation: fadeOut $speed300;
 }
 
-.slideHorizontal-enter-active {
-    animation: slideInLeft $speed300;
+.slideLeft-enter-active {
+    animation: slideInLeft 1s;
 }
 
-.slideHorizontal-leave-active {
-    animation: slideOutRight $speed300;
+.slideLeft-leave-active {
+    animation: slideOutRight 1s;
+}
+
+.slideRight-enter-active {
+    animation: slideInRight 1s;
+}
+
+.slideRight-leave-active {
+    animation: slideOutLeft 1s;
 }

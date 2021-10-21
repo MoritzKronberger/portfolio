@@ -1,6 +1,6 @@
 <template>
         <div id="carousel" v-show="this.slides > 0">
-            <slot :current-slide="this.currentSilde" />
+            <slot :current-slide="this.currentSilde" :change-to-direction="this.changeToDirection"/>
             <span v-show="this.navigation" class="navigation" id="forwards" @click="changeSlide('forwards')">
                 next
             </span>
@@ -33,16 +33,20 @@ export default {
     },
     data () {
         return {
-            currentSilde: 0
+            currentSilde: 0,
+            changeToDirection: ''
         }
     },
     methods: {
         changeSlide(changeTo) {
             if(changeTo === 'forwards') {
+                this.changeToDirection = 'left'
                 this.currentSilde < this.slides-1 ? this.currentSilde++ : this.currentSilde=0
             } else if (changeTo === 'backwards') {
+                this.changeToDirection = 'right'
                 this.currentSilde > 0  ? this.currentSilde-- : this.currentSilde = this.slides-1
             } else if (changeTo >= 0 && changeTo < this.slides) {
+                changeTo > this.currentSilde ? this.changeToDirection = 'left' : this.changeToDirection = 'right'
                 this.currentSilde = changeTo
             }
         }

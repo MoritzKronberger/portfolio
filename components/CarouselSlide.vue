@@ -1,13 +1,13 @@
 <template>
     <transition :name="this.transitionName">
-        <slot class="slide"/>
+        <slot/>
     </transition>
 </template>
 
 <script>
 export default {
     props: {
-        transitionName: String
+        transitionName: String,
     }
 }
 </script>

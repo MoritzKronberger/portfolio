@@ -21,8 +21,8 @@
                     </span>
                 </li>
             </ul>
-            <Carousel :path="post.slug" :slides="this.carouselResources.length" v-slot="{ currentSlide }">
-                <carousel-slide v-for="(img, index) of carouselResources" :key="img" transition-name="slideHorizontal" :slide-index="index">
+            <Carousel :path="post.slug" :slides="this.carouselResources.length" v-slot="{ currentSlide, changeToDirection }">
+                <carousel-slide v-for="(img, index) of carouselResources" :key="img" :transition-name="transitions[changeToDirection]" :slide-index="index">
                     <img v-show="index === currentSlide" :src="img" :alt="post.slug">
                 </carousel-slide>
             </Carousel>
@@ -39,7 +39,8 @@
         },
         data (){
             return {
-                carouselResources: []
+                carouselResources: [],
+                transitions: {right: 'slideRight', left: 'slideLeft'}
             }
         },
         mounted() {
