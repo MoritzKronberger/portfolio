@@ -13,6 +13,7 @@
 All front matter variables not included in the requirements are optional, however a custom **meta_desc** should be included for SEO.
 
 If a repo variable is added, the repository/ repositories must be listed in object format, as shown below.
+If the post features an image carousel an alt text for all images can be added with the carouselAlt variable.
 
 The full supported front matter looks like the following:
 
@@ -23,6 +24,7 @@ tags: descriptive tags
 date: YYYY-MM-DD
 category: compsci / design
 meta_desc: custom meta decription
+carouselAlt: [alt text for slide 1, alt text for slide 2]
 tech: technologies used
 team: team size
 role: role in the team
