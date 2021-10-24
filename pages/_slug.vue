@@ -23,7 +23,7 @@
             </ul>
             <Carousel :path="post.slug" :slides="this.carouselResources.length" v-slot="{ currentSlide, changeToDirection }">
                 <carousel-slide v-for="(img, index) of carouselResources" :key="img" :transition-name="transitions[changeToDirection]" :slide-index="index">
-                    <img v-show="index === currentSlide" :src="img" :alt="post.slug">
+                    <img v-show="index === currentSlide" :src="img" :alt="post.carouselAlt ? post.carouselAlt[index] : post.slug">
                 </carousel-slide>
             </Carousel>
             <nuxt-content :document="post" />

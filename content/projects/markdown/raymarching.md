@@ -4,6 +4,7 @@ tags: computer-graphics rendering unity hlsl c#
 date: 2021-07-01
 category: compsci
 meta_desc: Exploring the render pipeline by building a Raymarching render engine from scratch
+carouselAlt: [alt text for slide 1, alt text for slide 2]
 tech: Unity, HLSL, C#
 repo: {Renderer: https://github.com/MoritzKronberger/Raymarching, Visualization: https://github.com/MoritzKronberger/Raymarching_Visualization}
 ---

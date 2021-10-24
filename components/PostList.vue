@@ -64,25 +64,32 @@
 
     li {
         margin: 0 calc(.5 * var(--clm-gap)) v(mrg-postList-items-bottom);
+        background: pink;
+        width: v(clm-width);
+        height: v(clm-width);
     }
 
     a {
         position: relative;
-        width: v(clm-width);
-        height: v(clm-width);
+        width: 100%;
+        height: 100%;
         display: inline-block;
         @include font($main, regular);
         color: $offBlack;
         text-decoration: none;
+        outline: solid 3px;
+        background-color: green;
     }
 
     h2 {
         @include font($main, regular);
+        font-weight: bold;
         top: 0;
     }
 
     p {
         @include font($code, regular);
+        font-weight: bold;
         bottom: 0;
     }
 
@@ -97,12 +104,17 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        filter: grayscale(1) opacity(.6);
+        filter: opacity(0);
         transition: filter $speed500;
     }
 
-    img:hover {
-        filter: grayscale(0) opacity(1);
+    a:hover {
+        outline: none;
+        transition: outline $speed500;
+    }
+
+    a:hover img{
+        filter: opacity(1);
         transition: filter $speed500;
     }
 
