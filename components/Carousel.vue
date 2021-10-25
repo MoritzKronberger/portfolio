@@ -1,6 +1,9 @@
 <template>
         <div id="carousel" v-show="this.slides > 0">
-            <slot :current-slide="this.currentSilde" :change-to-direction="this.changeToDirection"/>
+            <div id="carouselRelative">
+                <div id="slideWrapper">
+                    <slot :current-slide="this.currentSilde" :change-to-direction="this.changeToDirection"/>
+                </div>
             <span v-show="this.navigation" 
                   class="material-icons-sharp navigation" 
                   id="backwards" 
@@ -11,9 +14,10 @@
                   id="forwards" 
                   @click="changeSlide('forwards')"
                   >navigate_next</span>
+            </div>
             <div v-show="this.pagination" class="pagination">
-                <span class="slideMarker" v-for="r, index of this.slides" :key="r" :id="index==currentSilde" @click="changeSlide(index)">
-                </span>
+                <div class="slideMarker" v-for="r, index of this.slides" :key="r" :id="index==currentSilde" @click="changeSlide(index)">
+                </div>
             </div>
         </div>
 </template>
@@ -78,30 +82,47 @@
 </script>
 
 <style lang="scss" scoped>
+    @use "sass:list";
     @import url('https://fonts.googleapis.com/icon?family=Material+Icons+Sharp');
     @import '@/assets/css/_shared';
 
     #carousel {
+        width: 100%;
+    }
+
+    #carouselRelative {
         position: relative;
         width: 100%;
-        height: 20rem;
+        overflow: hidden;
+    }
+
+    #slideWrapper {
+        position: relative;
+        width: v(mrg-carousel-width);
+        aspect-ratio: 21 / 10;
+        margin: 0 auto;
         overflow: hidden;
     }
 
     .navigation, .pagination {
-        position: absolute;
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
+        user-select: none;
     }
 
     .navigation {
+        position: absolute;
         line-height: 0;
         top: 50%;
     }
 
     .material-icons-sharp.navigation {
-        margin-left: -.7rem;
-        margin-right: -.65rem;
+        margin-left: v(mrg-carousel-backwards-offset);
+        margin-right: v(mrg-carousel-forwards-offset);
         color: $offBlack;
-        font-size: 2rem;
+        font-size: v(mrg-carousel-navigation-icon-size);
     }
 
     #forwards {
@@ -113,20 +134,18 @@
     }
 
     .pagination {
-        left: 0;
-        bottom: 1rem;
         width: 100%;
         display: flex;
         justify-content: center;
+        margin: v(mrg-carousel-pagination-top) 0 v(mrg-slug-frontMatter);
     }
 
     .slideMarker {
-        display: inline-block;
-        width: .5rem;
-        height: .5rem;
-        border: solid 1.5px;
+        width: v(mrg-carousel-pagination-diameter);
+        height: v(mrg-carousel-pagination-diameter);
+        border: solid v(mrg-carousel-pagination-border);
         border-radius: 50%;
-        margin: 0 .25rem 0;
+        margin: 0 v(mrg-carousel-pagination-spacing);
     }
 
     #true {

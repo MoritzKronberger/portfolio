@@ -153,7 +153,7 @@ $margins: (
     slug: (
         regular:  (
             h1-top: 7rem,
-            frontMatter: 3rem
+            frontMatter: 3rem,
         ),
         tablet: (
             h1-top: 3rem,
@@ -162,6 +162,28 @@ $margins: (
         mobile: (
             h1-top: 1.5rem,
             frontMatter: 2rem
+        )
+    ),
+    carousel: (
+        regular:  (
+            width: 80%,
+            navigation-icon-size: 2.25rem,
+            backwards-offset: -.75rem,
+            forwards-offset: -.72rem,
+            pagination-top: .5rem,
+            pagination-diameter: .55rem,
+            pagination-spacing: .25rem,
+            pagination-border: 1.5px
+        ),
+        tablet: (
+            pagination-diameter: .62rem,
+            pagination-spacing: .35rem
+        ),
+        mobile: (
+            width: 100%,
+            pagination-top: .65rem,
+            pagination-diameter: .57rem,
+            pagination-spacing: .5rem
         )
     )
 );

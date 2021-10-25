@@ -17,17 +17,17 @@
 }
 
 .slideLeft-enter-active {
-    animation: slideInLeft $speed500;
+    animation: slideInLeft $speed700;
 }
 
 .slideLeft-leave-active {
-    animation: slideOutRight $speed500;
+    animation: slideOutRight $speed700;
 }
 
 .slideRight-enter-active {
-    animation: slideInRight $speed500;
+    animation: slideInRight $speed700;
 }
 
 .slideRight-leave-active {
-    animation: slideOutLeft $speed500;
+    animation: slideOutLeft $speed700;
 }
