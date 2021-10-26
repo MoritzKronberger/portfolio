@@ -45,7 +45,7 @@
     @include font($main, huge);
     color: $offBlack;
     text-decoration: none;
-    border: solid 3px;
+    border: solid v(fs-border-regular);
 
     flex-shrink: 0;
     width: v(clm-width);
@@ -61,7 +61,7 @@
   a:hover{
     animation: fill $speed300;
     animation-fill-mode: both;
-    border: solid 3px $offBlack;
+    border: solid v(fs-border-regular) $offBlack;
   }
 
   @keyframes fill {
