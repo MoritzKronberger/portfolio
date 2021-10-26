@@ -34,6 +34,14 @@ $font-sizes: (
             huge: 2.75rem,
             big: 1rem,
         )
+    ),
+    border: (
+        regular: (
+            regular: 3px
+        ),
+        tablet: (
+            regular: 2.5px
+        )
     )
 );
 
@@ -144,7 +152,14 @@ $margins: (
     ),
     postList: (
         regular: (
-            items-bottom: 2rem
+            items-bottom: 2rem,
+            text-around: 1rem,
+            h2-hidden: .5rem,
+            hide-percent: 89%
+        ),
+        tablet: (
+            h2-hidden: .2rem,
+            hide-percent: 87%
         ),
         mobile: (
             items-bottom: 2.5rem
@@ -192,6 +207,7 @@ $margins: (
 $customProps: (
     fs-main: map-get($font-sizes, main),
     fs-code: map-get($font-sizes, code),
+    fs-border: map-get($font-sizes, border),
     clm: $main-columns,
     hdc: $header-columns
 );

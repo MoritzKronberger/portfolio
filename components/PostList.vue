@@ -2,11 +2,13 @@
     <main>
         <article class="projectsWrapper">
             <ul>
-                <li v-for="post of posts" :key="post.slug">
+                <li class="projectCard" v-for="post of posts" :key="post.slug">
                 <NuxtLink :to="{ name: 'slug', params: { slug: post.slug } }">
                     <img :src="require(`../content/projects/assets/images/thumbnails/${post.slug}.png`)" :alt="post.title + ' thumbnail'">
-                    <h2>{{ post.title }}</h2>
-                    <p>{{ post.tags }}</p>
+                    <div class="cardInfo">
+                        <h2>{{ post.title }}</h2>
+                        <p>{{ post.tags }}</p>
+                    </div>
                 </NuxtLink>
                 </li>
             </ul>
@@ -33,6 +35,9 @@
 <style lang="scss" scoped>
     @import '@/assets/css/_shared';
     @import '@/assets/css/breakpoints';
+    @import '@/assets/css/animations';
+
+    $revealSpeed: $speed700;
 
     main {
         grid-area: main;
@@ -64,7 +69,6 @@
 
     li {
         margin: 0 calc(.5 * var(--clm-gap)) v(mrg-postList-items-bottom);
-        background: pink;
         width: v(clm-width);
         height: v(clm-width);
     }
@@ -77,14 +81,35 @@
         @include font($main, regular);
         color: $offBlack;
         text-decoration: none;
-        outline: solid 3px;
-        background-color: green;
+        overflow: hidden;
+        border-bottom: v(fs-border-regular) solid;
+    }
+
+    .cardInfo {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $offWhite;
+        border-top: v(fs-border-regular) solid;
+        border-left: v(fs-border-regular) solid;
+        border-right: v(fs-border-regular) solid;
+        transform: translateY(0%);
+        transition: transform $revealSpeed;
+    }
+
+    h2, p {
+        position: absolute;
+        margin: v(mrg-postList-text-around);
     }
 
     h2 {
         @include font($main, regular);
         font-weight: bold;
         top: 0;
+        margin-top: v(mrg-postList-text-around);
+        transition: margin-top $revealSpeed;
     }
 
     p {
@@ -93,33 +118,19 @@
         bottom: 0;
     }
 
-    h2, p {
-        position: absolute;
-        margin: 1rem 1rem;
-        filter: opacity(1);
-        transition: filter $speed500;
-    }
-
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        filter: opacity(0);
-        transition: filter $speed500;
     }
 
-    a:hover {
-        outline: none;
-        transition: outline $speed500;
+    a:hover .cardInfo {
+        transform: translateY(v(mrg-postList-hide-percent));
+        transition: transform $revealSpeed;
     }
 
-    a:hover img{
-        filter: opacity(1);
-        transition: filter $speed500;
-    }
-
-    a:hover h2, a:hover p {
-        filter: opacity(0);
-        transition: filter $speed500;
+    a:hover h2 {
+        margin-top: v(mrg-postList-h2-hidden);
+        transition: margin-top $revealSpeed;
     }
 </style>
