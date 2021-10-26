@@ -67,7 +67,6 @@
                     for (let button of buttons) {
                         button.setAttribute('tabindex', '0')
                         button.setAttribute('role', 'button')
-                        console.log(button.className)
                         button.setAttribute('aria-label', 
                                             `carousel ${button.className === 'slideMarker' ? 
                                                         `${button.id === 'true' ? 'active' : ''} slide pagination` : 
