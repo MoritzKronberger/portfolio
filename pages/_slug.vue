@@ -39,35 +39,31 @@
         },
         data (){
             return {
+                testData: '',
                 carouselResources: [],
                 transitions: {right: 'slideRight', left: 'slideLeft'}
             }
         },
         mounted() {
             this.loadResources(require.context(`~/content/projects/assets/images`, true, /carousel/))
-            let filter = []
-            for (const img of this.carouselResources) {
-                const splitPath = img.split('/')
-                const path = splitPath[splitPath.indexOf('carousel')-1]
-                if (path != this.post.slug){
-                    filter.push(img)
-                }
-            }
-            for (const img of filter){
-                this.carouselResources.pop(img)
-            }
         },
         methods: {
-            loadResources(r) {
-                r.keys().forEach((key) => (this.carouselResources.push(r(key))))
+            async loadResources(r) {
+                for (const key of r.keys()) {
+                    const splitPath = key.split('/')
+                    const path = splitPath[splitPath.indexOf('carousel')-1]
+                    if (path === this.post.slug){
+                        this.carouselResources.push(r(key))
+                    }
+                }
             }
         },
         head() {
             return {
                 title: this.post.title,
-            meta: [
-                { hid: `desc-${this.post.slug}`, name: 'description', content: this.post.meta_desc ? this.post.meta_desc : `${this.post.title}: A ${this.post.category} project` }
-            ]
+                meta: [
+                    { hid: `desc-${this.post.slug}`, name: 'description', content: this.post.meta_desc ? this.post.meta_desc : `${this.post.title}: A ${this.post.category} project` }
+                ]
             }
         }
     } 
