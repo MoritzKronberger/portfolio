@@ -82,7 +82,6 @@
 
 <style lang="scss" scoped>
     @use "sass:list";
-    @import url('https://fonts.googleapis.com/icon?family=Material+Icons+Sharp');
     @import '@/assets/css/_shared';
 
     #carousel {
