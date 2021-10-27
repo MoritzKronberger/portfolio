@@ -1,7 +1,7 @@
 ---
 title: Raymarching
 tags: computer-graphics rendering unity hlsl c#
-thumbnail: raymarching.png
+thumbnail: raymarching.webp
 date: 2021-07-01
 category: compsci
 meta_desc: Exploring the render pipeline by building a Raymarching render engine from scratch
