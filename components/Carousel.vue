@@ -69,8 +69,8 @@
                         button.setAttribute('role', 'button')
                         button.setAttribute('aria-label', 
                                             `carousel ${button.className === 'slideMarker' ? 
-                                                        `${button.id === 'true' ? 'active' : ''} slide pagination` : 
-                                                        button.id} 
+                                                      'slide pagination' : 
+                                                      button.id} 
                                             button`)
                         button.style.cursor = 'pointer'
                     }
