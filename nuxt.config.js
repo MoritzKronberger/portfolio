@@ -95,5 +95,9 @@ export default {
   pageTransition: { 
     name: 'slideDown',
     appear: true
+  },
+
+  generate: {
+    cache: false
   }
 }
