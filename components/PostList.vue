@@ -4,7 +4,7 @@
             <ul>
                 <li class="projectCard" v-for="post of posts" :key="post.slug">
                 <NuxtLink :to="{ name: 'slug', params: { slug: post.slug } }">
-                    <img :src="require(`../content/projects/assets/images/thumbnails/${post.slug}.png`)" :alt="post.title + ' thumbnail'">
+                    <img :src="require(`../content/projects/assets/images/thumbnails/${post.thumbnail}`)" :alt="post.title + ' thumbnail'">
                     <div class="cardInfo">
                         <h2>{{ post.title }}</h2>
                         <p>{{ post.tags }}</p>

@@ -1,6 +1,7 @@
 ---
 title: Portfolio
 tags: web-development headless-cms nuxt netlify
+thumbnail: portfolio.png
 date: 2021-10-30
 category: compsci
 meta_desc: My personal portfolio implementet as a git-based Headless CMS using Nuxt Content and Netlify

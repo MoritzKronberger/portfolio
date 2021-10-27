@@ -1,6 +1,7 @@
 ---
 title: Snippets
 tags: web-development fullstack vue express postgres
+thumbnail: snippets.png
 date: 2021-07-10
 category: compsci
 meta_desc: A fullstack web project allowing users to create, share, like and comment code snippets

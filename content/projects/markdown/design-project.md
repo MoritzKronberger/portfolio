@@ -1,6 +1,7 @@
 ---
 title: Design Placeholder
 tags: design placeholder tags
+thumbnail: design-project.png
 date: 2021-09-28
 category: design
 meta_desc: Placeholder project, please ignore

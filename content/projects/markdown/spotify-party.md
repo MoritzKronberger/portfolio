@@ -1,6 +1,7 @@
 ---
 title: SpotifyParty
 tags: web-development fullstack websockets python django
+thumbnail: spotify-party.png
 date: 2021-02-10
 category: compsci
 meta_desc: A fullstack web project allowing users to share their spotify playlists and vote on the next song to be played
