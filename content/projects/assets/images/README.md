@@ -4,14 +4,13 @@
 
 ### Thumbnail Naming
 
-1. Thumbnail name must match the name of the corresponding markdown file
-
-2. Thumbnails must have a .png file extension
+1. The thumbnail name must match the name set in the markdown front matter
+2. The thumbnail file extension must match the file extension set in the markdown front matter
 
 ### Thumbnail Sizing
 
 1. The thumbnail width should be 800 pixels
-2. A square aspect ratio is preferable
+2. The thumbnail should have a square aspect ratio and will otherwise be cropped
 
 ## Post images
 

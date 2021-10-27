@@ -8,6 +8,8 @@
 
 3. All posts need a thumbnail located in the **assets/images/thumbnails** directory
 
+4. The thumbnail file-name and -extension must be set as **thumbnail** in the front matter
+
 ## Front Matter
 
 All front matter variables not included in the requirements are optional, however a custom **meta_desc** should be included for SEO.
@@ -21,6 +23,7 @@ The full supported front matter looks like the following:
 ---
 title: post title
 tags: descriptive tags
+thumbnail: thumbnail_name.webp
 date: YYYY-MM-DD
 category: compsci / design
 meta_desc: custom meta decription
