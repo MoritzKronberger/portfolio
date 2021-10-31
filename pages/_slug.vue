@@ -112,10 +112,6 @@
             @include font($code, big);
             margin: 1.2rem 0 .6rem;
         }
-        
-        h2:first-of-type {
-            margin-top: 0;
-        }
 
         img {
             display: block;
@@ -132,5 +128,9 @@
             text-decoration: underline 1px;
             text-underline-offset: 2px;
         }
+    }
+
+    .nuxt-content:first-child {
+        margin-top: 0;
     }
 </style>
