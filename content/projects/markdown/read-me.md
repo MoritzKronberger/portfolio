@@ -8,8 +8,6 @@ meta_desc: An analog interface that encourages midful interaction with text
 tech: p5js, Print, Adobe Illustrator
 ---
 
-##
-
 ReadMe is an application that encourages midful interaction with text.
 
 As a museum installation it is meant to inform its users about the 2013 NSA spying scandal in ca. 1000 characters.
