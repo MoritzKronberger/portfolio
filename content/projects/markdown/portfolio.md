@@ -1,15 +1,17 @@
 ---
 title: Portfolio
 tags: web-development headless-cms nuxt netlify
-thumbnail: portfolio.png
-date: 2021-10-30
+thumbnail: portfolio.webp
+date: 2021-11-01
 category: compsci
-meta_desc: My personal portfolio implementet as a git-based Headless CMS using Nuxt Content and Netlify
+meta_desc: My personal portfolio implemented as a git-based Headless CMS using Nuxt Content and Netlify
 tech: Nuxt.js, Nuxt Content, Sass, Netlify
 repo: {GitHub: https://github.com/MoritzKronberger/portfolio}
 ---
 
-This portfolio website is implemented as a git-based Headless CMS based on the Nuxt Content module. A strong focus with the development of this project was responsive design, SEO and fast serverside rendered content.
-The side is hosted on netlify with an automated build process based on the project's git repository making it an easy to use CMS.
+This portfolio website is a fast, accessible and search engine optimized, server side rendered webpage, built using Nuxt.js.
+The use of the Nuxt.js module [Nuxt Content](https://content.nuxtjs.org/) combined with automated building on Netlify makes for a simple, easy to use, git-based headless CMS.
 
-![test image](../assets/images/thumbnails/portfolio.png)
+The responsive website layout was created using Dart Sass and has dedicated breakpoints for mobile and tablet devices.
+
+Additionally the Nuxt transition functionality was combined with [animate.css](https://animate.style/) animations to create most of the sites animations.
