@@ -115,12 +115,12 @@
 
         img {
             display: block;
-            width: 100%;
+            max-width: 100%;
             margin: 0 auto;
         }
 
         p + img, img + p {
-            margin-top: v(mrg-global-small);
+            margin-top: v(mrg-global-top);
         }
 
         a {
