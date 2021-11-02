@@ -13,23 +13,25 @@ tech: SideFX Houdini, Mantra
 team: {Martin Kohnle: https://github.com/kohnmart}
 ---
 
-The focus of this project was the exploration of different procedural setups to create different types of clouds.
-The shelf-tools provided by Houdini were chosen as a starting point and the two supported approaches of using either polygon-meshes or point-clouds as base geometry were investigated seperately.
+Central to this project was the study of possible procedural setups to create different types of clouds.
+The shelf-tools provided by SideFX Houdini were chosen as a starting point and both supported approaches of using either polygon-meshes or point-clouds as base geometry were investigated.
 
-The main improvements include custom noises to vary the density within a cloud, which greatly improves realism, as well as procedurally adjusting the volumes so their densities become invariant to their scale.
+The most significant improvements were made to the inner density of the cloud, which needed to be varied using custom noises in order to greatly improve its realism, as well as procedurally adjusting the volumes' densities become invariant to their scale.
 <br></br>
 
-The resulting clouds became the main protagonist of the sort film 'Project Clouds', which is based on the following plot:
+The two resulting types of clouds became the main protagonist of the short film 'Project Clouds', which was to be based on the following plot:
 <br></br>
-For the third day already, the evening sky just seems a bit off.
 
-The clouds seemed to look even more unnatural as the days before.
+'For the third day already, the evening sky just seemed a bit off.
 
-And when nature went quiet, the storm began.
+The clouds looked even more unnatural as the days before.
+
+And when nature went quiet, the storm began.'
 <br></br>
-To convey the attack of the clouds on mankind, a setup for procedurally generated 'cloud arms' that would extend towards the ground
-was created combining the above techniques for point-based cloud generation and point advection with curl noise.
 
-A vellum simulation was used to visualize the wind affecting a wheat field.
+To convey the attack of the clouds on humanity, a setup for procedurally generated 'cloud arms' that would extend towards the ground
+was created by using the above technique for point-based cloud generation and advecting the points to an extruding polygon arm-structure with curl noise.
 
-Both the [short film](https://youtu.be/AwPGj9VenKA) and the [curl flowed arms](https://youtu.be/G2OnUsg9y2E) are available as flipbook renders.
+Additionally the landscape was created from a mapbox terrain tile and a vellum simulation was used show wind affecting the wheat field.
+
+Both the [short film](https://youtu.be/AwPGj9VenKA) and a more detailed closeup of the [curl flowed arms](https://youtu.be/G2OnUsg9y2E) are available as flipbook renders.

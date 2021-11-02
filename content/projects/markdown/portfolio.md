@@ -9,9 +9,9 @@ tech: Nuxt.js, Nuxt Content, Sass, Netlify
 repo: {GitHub: https://github.com/MoritzKronberger/portfolio}
 ---
 
-This portfolio website is a fast, accessible and search engine optimized, server side rendered webpage, built using Nuxt.js.
+This portfolio website is a fast, accessible, and search engine optimized, server side rendered webpage, built with Nuxt.js.
 The use of the Nuxt.js module [Nuxt Content](https://content.nuxtjs.org/) combined with automated building on Netlify makes for a simple, easy to use, git-based headless CMS.
 
 The responsive website layout was created using Dart Sass and has dedicated breakpoints for mobile and tablet devices.
 
-Additionally the Nuxt transition functionality was combined with [animate.css](https://animate.style/) animations to create most of the sites animations.
+Additionally the Nuxt transition functionality was combined with [animate.css](https://animate.style/) to create most of the sites animations.

@@ -15,10 +15,10 @@ team: {Martin Kohnle: https://github.com/kohnmart}
 ---
 
 This Django webapplication allows users to connect in live sessions, which are sharable with invite-codes and lets session guests vote on the next song to be played from the host's chosen Spotify playlist.
-Within a session the progress of the currently playing song is tracked to give an indication of the remaining time to vote. The most voted song will automatically be played next by the host's spotify account on the selected device.
-
+Within a session the progress of the currently playing song is tracked to give an indication of the remaining time to vote. The most voted song will automatically be played next by the host's Spotify account on the selected device.
+<br></br>
 The project consists of a Django backend with an SQLite database and a dockerized Redis server as a websocket cache.
 Live sessions are made possible by websockets, implemented using the DjangoChannels plugin.
-Authenticaton is handled by a Spotify-OAuth, which also makes interactions with the users's Spotify profile possible.
-
-A more in depth documentation about the development process of the project can be found [here](https://github.com/MoritzKronberger/SpotifyParty/blob/master/Dokumentation.pdf) [german].
+Authentication is handled by a Spotify-OAuth, which also makes interactions with the users's Spotify profile possible.
+<br></br>
+A more in depth documentation about the development process of the project can be found [here](https://github.com/MoritzKronberger/SpotifyParty/blob/master/Dokumentation.pdf) [German].
