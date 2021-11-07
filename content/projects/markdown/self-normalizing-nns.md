@@ -7,7 +7,9 @@ category: compsci
 meta_desc: Taking a look at the math behind various forms of neural activity standardization, especially Self Normalizing Neural Networks
 ---
 
-![Two graphs comparing the training loss over the training iterations for SNNs and NNs using Batch Norm of different depths on the MNIST and Cifar10 datasets, showing faster convergence for the SNNs](../assets/images/self-normalizing-nns/comparison.webp)
+![Two graphs comparing the training loss over the training iterations for SNNs and NNs using Batch Norm of different depths on the MNIST and CIFAR10 datasets, showing faster convergence for the SNNs](../assets/images/self-normalizing-nns/comparison.webp)
+
+<span id="imageSource">Comparing training error on MNIST (left) and CIFAR10 (right) ([Klambauer et al. 2017](https://arxiv.org/pdf/1706.02515.pdf))</span>
 
 The seminar paper <a href="/pdfs/Techniken zur Standardisierung der Schicht-Inputs Neuronaler Netze.pdf">'Methods of Neural Network Layer-Input-standardization'</a>
 [German] takes a deep-dive into the various forms of normalization

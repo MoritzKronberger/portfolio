@@ -12,6 +12,8 @@ role: Neural Network, dataset creation, Postgres database
 
 ![A drawing of the German Sign Language signs for the letters f, l, a and i](../assets/images/learning-sign-language/flai.webp)
 
+<span id="imageSource">Illustration by Stefanie Jany</span>
+
 'Learning Sign Language' is currently my main active project and part of my [European Project Semester](http://www.europeanprojectsemester.eu/).
 <br></br>
 The main goal is to build the technical framework for a web application, that allows its users to learn the basics of German Sign Language (primarily the signed alphabet),

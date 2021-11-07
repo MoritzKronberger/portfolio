@@ -152,6 +152,13 @@
             text-decoration: underline 1px;
             text-underline-offset: 2px;
         }
+
+        #imageSource {
+            @include font($code, small);
+            display: block;
+            margin-top: 0;
+            margin-bottom: v(mrg-slug-frontMatter);
+        }
     }
 
     .nuxt-content:first-child {
