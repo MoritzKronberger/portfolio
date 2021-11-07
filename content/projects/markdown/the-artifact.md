@@ -5,6 +5,9 @@ thumbnail: the-artifact.webp
 date: 2021-04-24
 category: design
 meta_desc: An exploration of animation, terrain and rigidbody simulation in Houdini
+carouselAlt: ["A chrome and orange spacecraft flying close to the surface of a Mars-like planet", 
+              "The spacecraft hovering over the surface and lifting up a large cystal with a blue, cone shaped tractor beam",
+              "The spacecraft and crystal crashing into the dusty surface"]
 tech: SideFX Houdini, Substance Painter, Mantra
 ---
 The short film "The Artifact" is my interpretation of the following storyline:

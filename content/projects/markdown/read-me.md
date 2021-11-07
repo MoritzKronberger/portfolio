@@ -5,6 +5,10 @@ thumbnail: read-me.webp
 date: 2021-01-27
 category: design
 meta_desc: An analog interface that encourages mindful interaction with text
+carouselAlt: ["A hand swiping an unlock screen on the ReadMe interface", 
+              "A hand underlining the text with the index finger while reading",
+              "A mockup of two people interacting with the ReadMe interface in a big, empty, white room",
+              "A mockup of the ReadMe interface resting on a pedestal"]
 tech: p5js, Print, Adobe Illustrator
 ---
 
@@ -21,4 +25,4 @@ But also in our "analog life" places like museums regularly inform us into infor
 
 The context of spying serves as an anchor for the entire application's design: from the printed-file-interface to the encryption of "confidential" content.
 
-Both a [live demo of the interface](https://youtu.be/DLCqOZdjk9o) and more in-depth [documentation](https://hsa.incom.org/project/3175) of the project are available.
+Both a [live demo of the interface](https://youtu.be/DLCqOZdjk9o) and more in-depth [documentation](https://hsa.incom.org/project/3175) [German] of the project are available.
