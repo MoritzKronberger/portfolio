@@ -142,7 +142,7 @@
         }
 
         p + img, img + p {
-            margin-top: v(mrg-global-top);
+            margin-top: v(mrg-slug-frontMatter);
         }
 
         a {
