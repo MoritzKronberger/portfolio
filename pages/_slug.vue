@@ -2,25 +2,38 @@
     <main>
         <article>
             <h1>{{ post.title }}</h1>
-            <ul class="frontMatter">
-                <li>Date: {{post.date | longMonth_numericYear}}</li>
-                <li v-if="post.tech">Tech: {{post.tech}}</li>
-                <li v-if="post.team">
-                    Team: 
-                    <span v-for="(link, member, index) of post.team" :key="member">
-                        <span v-if="index !== 0">, </span>
-                        <a :href="link">{{member}}</a>
-                    </span>
-                </li>
-                <li v-if="post.role && post.team">Role: {{post.role}}</li>
-                <li v-if="post.repo">
-                    Code: 
-                    <span v-for="(link, name, index) of post.repo" :key="name">
-                        <span v-if="index !== 0">, </span>
-                        <a :href="link">{{name}}</a>
-                    </span>
-                </li>
-            </ul>
+            <table class="frontMatter">
+                <tr>
+                    <td>Date:</td>
+                    <td>{{post.date | longMonth_numericYear}}</td>
+                </tr>
+                <tr v-if="post.tech">
+                    <td>Tech:</td>
+                    <td>{{post.tech}}</td>
+                </tr>
+                <tr v-if="post.team">
+                    <td>Team:</td>
+                    <td>
+                        <span v-for="(link, member, index) of post.team" :key="member">
+                            <span v-if="index !== 0">, </span>
+                            <a :href="link">{{member}}</a>
+                        </span>
+                    </td>
+                </tr>
+                <tr v-if="post.role && post.team">
+                    <td>Role:</td>
+                    <td>{{post.role}}</td>
+                </tr>
+                <tr v-if="post.repo">
+                    <td>Code:</td>
+                    <td>
+                        <span v-for="(link, name, index) of post.repo" :key="name">
+                            <span v-if="index !== 0">, </span>
+                            <a :href="link">{{name}}</a>
+                        </span>
+                    </td>
+                </tr>
+            </table>
             <Carousel :path="post.slug" :slides="this.carouselResources.length" v-slot="{ currentSlide, changeToDirection }">
                 <carousel-slide v-for="(img, index) of carouselResources" :key="img" :transition-name="transitions[changeToDirection]" :slide-index="index">
                     <img v-show="index === currentSlide" :src="img" :alt="post.carouselAlt ? post.carouselAlt[index] : post.slug">
@@ -92,8 +105,17 @@
 
     .frontMatter {
         @include font($code, regular);
-        list-style-type: none;
+        border-collapse: separate;
         margin: v(mrg-slug-frontMatter) 0;
+    }
+
+    .frontMatter td{
+        vertical-align: text-top;
+    }
+
+    .frontMatter tr td:nth-child(2){
+        display: inline-block;
+        margin-left: calc(var(--fs-code-regular)*.5);
     }
 
     a {
