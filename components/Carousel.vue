@@ -16,8 +16,7 @@
                   >navigate_next</span>
             </div>
             <div v-show="this.pagination" class="pagination">
-                <div class="slideMarker" v-for="r, index of this.slides" :key="r" :id="index==currentSilde" @click="changeSlide(index)">
-                </div>
+                <span id="active">{{ this.currentSilde + 1}}</span>/{{ this.slides }}
             </div>
         </div>
 </template>
@@ -63,15 +62,11 @@
             // make pseudo buttons accssessible, execute after slides first update   
             slides: function (){
                 this.$nextTick(() => {
-                    const buttons = document.querySelectorAll('.navigation, .slideMarker')
+                    const buttons = document.querySelectorAll('.navigation')
                     for (let button of buttons) {
                         button.setAttribute('tabindex', '0')
                         button.setAttribute('role', 'button')
-                        button.setAttribute('aria-label', 
-                                            `carousel ${button.className === 'slideMarker' ? 
-                                                      'slide pagination' : 
-                                                      button.id} 
-                                            button`)
+                        button.setAttribute('aria-label', `carousel ${button.id} button`)
                         button.style.cursor = 'pointer'
                     }
                 })
@@ -102,7 +97,7 @@
         overflow: hidden;
     }
 
-    .navigation, .pagination {
+    .navigation {
         -moz-user-select: -moz-none;
         -khtml-user-select: none;
         -webkit-user-select: none;
@@ -132,18 +127,14 @@
     }
 
     .pagination {
-        width: 100%;
-        display: flex;
-        justify-content: center;
+        color: $offBlack-inactive;
+        @include font($code, regular);
+        text-align: center;
         margin: v(mrg-carousel-pagination-top) 0 v(mrg-slug-frontMatter);
     }
 
-    .slideMarker {
-        width: v(mrg-carousel-pagination-diameter);
-        height: v(mrg-carousel-pagination-diameter);
-        border: solid v(mrg-carousel-pagination-border);
-        border-radius: 50%;
-        margin: 0 v(mrg-carousel-pagination-spacing);
+    .pagination #active{
+        color: $offBlack;
     }
 
     #true {
