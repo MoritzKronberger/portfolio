@@ -10,7 +10,7 @@ carouselAlt: ["A render of a dense cumulus cloud made with SideFX Houdini's shel
               "A render of a cumulus-ish cloud made with shelf tools using points as an input",
               "A render of a large cirrus cloud made with a custom setup using points as base geometry"]
 tech: SideFX Houdini, Mantra
-team: {Martin Kohnle: https://github.com/kohnmart}
+team: {Martin Kohnle: https://www.linkedin.com/in/martin-kohnle-504b2b1ba/}
 ---
 
 ## Procedural Cloud generation

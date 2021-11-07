@@ -11,7 +11,7 @@ carouselAlt: ["The SpotifyParty welcome page with options to join an existing pa
               "The main SpotifyParty session where users can vote on the next song to be played and information about the current song's playback progress is given"]
 tech: Django, Django Channels, Spotify API
 repo: {GitHub: https://github.com/MoritzKronberger/SpotifyParty}
-team: {Martin Kohnle: https://github.com/kohnmart}
+team: {Martin Kohnle: https://www.linkedin.com/in/martin-kohnle-504b2b1ba/}
 ---
 
 This Django web application allows users to connect in live sessions, which are sharable with invite codes and lets session guests vote on the next song to be played from the host's chosen Spotify playlist.

@@ -10,7 +10,8 @@ carouselAlt: ["The main feed of the snippets application for non logged in users
               "The form for creating a new code snippet post"]
 tech: Vue.js, Express, PostgreSQL, Docker
 repo: {GitHub: https://github.com/MoritzKronberger/Snippets}
-team: {Lea Jell: https://www.linkedin.com/in/lea-jell-3a3b681b5/?originalSubdomain=de, Martin Kohnle: https://github.com/kohnmart}
+team: {Lea Jell: https://www.linkedin.com/in/lea-jell-3a3b681b5/, 
+       Martin Kohnle: https://www.linkedin.com/in/martin-kohnle-504b2b1ba/}
 role: Postgres database, Docker, Wireframing
 ---
 
