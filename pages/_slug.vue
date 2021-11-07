@@ -3,6 +3,7 @@
         <article>
             <h1>{{ post.title }}</h1>
             <table class="frontMatter">
+                <tbody>
                 <tr>
                     <td>Date:</td>
                     <td>{{post.date | longMonth_numericYear}}</td>
@@ -33,6 +34,7 @@
                         </span>
                     </td>
                 </tr>
+                </tbody>
             </table>
             <Carousel :path="post.slug" :slides="this.carouselResources.length" v-slot="{ currentSlide, changeToDirection }">
                 <carousel-slide v-for="(img, index) of carouselResources" :key="img" :transition-name="transitions[changeToDirection]" :slide-index="index">
