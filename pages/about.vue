@@ -12,7 +12,7 @@
         <br>
         <p>
           While design is central to all my projects, my focus has been on the technical side of bringing interactive experiences to life, 
-          which allowed me to gain experience in fullstack web development, data management, 
+          which allowed me to gain experience in full stack web development, data management, 
           theory and application of deep learning techniques, as well as graphics programming.
         </p>
       </article>
