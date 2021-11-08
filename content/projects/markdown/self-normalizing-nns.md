@@ -11,7 +11,7 @@ meta_desc: Taking a look at the math behind various forms of neural activity sta
 
 <span id="imageSource">Comparing training error on MNIST (left) and CIFAR10 (right) ([Klambauer et al. 2017](https://arxiv.org/pdf/1706.02515.pdf))</span>
 
-The seminar paper <a href="/pdfs/Techniken zur Standardisierung der Schicht-Inputs Neuronaler Netze.pdf">'Methods of Neural Network Layer-Input-standardization'</a>
+The seminar paper static_['Methods of Neural Network Layer-Input-standardization'](/pdfs/Techniken zur Standardisierung der Schicht-Inputs Neuronaler Netze.pdf)
 [German] takes a deep-dive into the various forms of normalization
 that can be used to mitigate the problems of Vanishing or Exploding Gradient and high sensitivity to learning rate selection, that come with deep Neural Network architectures, while simultaneously speeding up their training.
 <br></br>

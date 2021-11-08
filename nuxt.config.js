@@ -51,7 +51,8 @@ export default {
   content: {},
 
   hooks: {
-    // replace markdown image syntax with reference to global ContentImg-Vue-component
+    // replace markdown image syntax with reference to global ContentImg component
+    // and static_[p1](p2) syntax with global StaticResource component
     'content:file:beforeParse': (file) => {
       if(file.extension === '.md'){
         function replaceImage (match, p1, p2) {
@@ -67,9 +68,14 @@ export default {
           } else {
             return match
           }
+        }
+        function replaceDownload (match, p1, p2) {
+          return `<static-resource href="${p2}" desc="${p1}"></static-resource>`
         } 
         // matches markdown image syntax ![p1](p2)
         file.data = file.data.replace(/!\[(.*?)\]\((.*?)\)/g, replaceImage)
+        // matches markdown image syntax d[p1](p2)
+        file.data = file.data.replace(/static_\[(.*?)\]\((.*?)\)/g, replaceDownload)
         return file.data 
       }
     }
