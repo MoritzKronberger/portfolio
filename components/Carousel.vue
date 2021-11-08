@@ -46,14 +46,14 @@ export default {
     changeSlide(changeTo) {
       if (changeTo === "forwards") {
         this.changeToDirection = "right";
-        this.currentSilde > 0
-          ? this.currentSilde--
-          : (this.currentSilde = this.slides - 1);
-      } else if (changeTo === "backwards") {
-        this.changeToDirection = "left";
         this.currentSilde < this.slides - 1
           ? this.currentSilde++
           : (this.currentSilde = 0);
+      } else if (changeTo === "backwards") {
+        this.changeToDirection = "left";
+        this.currentSilde > 0
+          ? this.currentSilde--
+          : (this.currentSilde = this.slides - 1);
       }
     }
   },
