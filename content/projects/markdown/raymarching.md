@@ -19,5 +19,5 @@ The goal of this project was to improve my mathematical understanding of the ren
 Raymarching as a rendering technique provided lots of opportunities for further exploration of mathematical topics like Constructive Solid Geometry and smoothing functions.
 Despite the overall focus on Raymarching, classic rendering concepts like the Blinn-Phong-Model were also used.
 <br></br>
-Apart from the render engine itself, implemented from scratch as a Compute Shader in Unity, the project consists of a [seminar paper](https://github.com/MoritzKronberger/Raymarching/blob/main/Doc/Documentation.pdf)
+Apart from the render engine itself, implemented from scratch as a Compute Shader in Unity, the project consists of a static_[seminar paper](/pdfs/Raymarching.pdf)
 [German] diving deeper into the underlying math, which is aided by a browser based [visualization](https://www.hs-augsburg.de/homes/mokro/mathematik/visualisierung_raymarching/).
