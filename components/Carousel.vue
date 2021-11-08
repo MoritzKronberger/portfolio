@@ -1,63 +1,72 @@
 <template>
-        <div id="carousel" v-show="this.slides > 0">
-            <div id="carouselRelative">
-                <div id="slideWrapper">
-                    <slot :current-slide="this.currentSilde" :change-to-direction="this.changeToDirection"/>
-                </div>
-            <span class="material-icons-sharp navigation" 
-                  id="backwards" 
-                  @click="changeSlide('backwards')"
-                  >navigate_before</span>
-            <span class="material-icons-sharp navigation" 
-                  id="forwards" 
-                  @click="changeSlide('forwards')"
-                  >navigate_next</span>
-            </div>
-            <div class="pagination">
-                <span id="active">{{ this.currentSilde + 1}}</span>/{{ this.slides }}
-            </div>
-        </div>
+  <div id="carousel" v-show="this.slides > 0">
+    <div id="carouselRelative">
+      <div id="slideWrapper">
+        <slot
+          :current-slide="this.currentSilde"
+          :change-to-direction="this.changeToDirection"
+        />
+      </div>
+      <span
+        class="material-icons-sharp navigation"
+        id="backwards"
+        @click="changeSlide('backwards')"
+        >navigate_before</span
+      >
+      <span
+        class="material-icons-sharp navigation"
+        id="forwards"
+        @click="changeSlide('forwards')"
+        >navigate_next</span
+      >
+    </div>
+    <div class="pagination">
+      <span id="active">{{ this.currentSilde + 1 }}</span
+      >/{{ this.slides }}
+    </div>
+  </div>
 </template>
 
 <script>
-    export default {
-        props: {
-            slides: {
-                type: Number,
-                default: 0,
-                required: true
-            },
-        },
-        data () {
-            return {
-                currentSilde: 0,
-                changeToDirection: ''
-            }
-        },
-        methods: {
-            changeSlide(changeTo) {
-                if(changeTo === 'forwards') {
-                    this.changeToDirection = 'right'
-                    this.currentSilde > 0  ? this.currentSilde-- : this.currentSilde = this.slides-1
-                } else if (changeTo === 'backwards') {
-                    this.changeToDirection = 'left'
-                    this.currentSilde < this.slides-1 ? this.currentSilde++ : this.currentSilde=0
-                }
-            }
-        },
-        watch: {
-            // make pseudo buttons accessible, execute after slides first update   
-            slides: function (){
-                this.$nextTick(() => {
-                    const buttons = document.querySelectorAll('.navigation')
-                    for (let button of buttons) {
-                        button.setAttribute('tabindex', '0')
-                        button.setAttribute('role', 'button')
-                        button.setAttribute('aria-label', `carousel ${button.id} button`)
-                        button.style.cursor = 'pointer'
-                    }
-                })
-            }
+export default {
+  props: {
+    slides: {
+      type: Number,
+      default: 0,
+      required: true
+    }
+  },
+  data() {
+    return {
+      currentSilde: 0,
+      changeToDirection: ""
+    };
+  },
+  methods: {
+    changeSlide(changeTo) {
+      if (changeTo === "forwards") {
+        this.changeToDirection = "right";
+        this.currentSilde > 0
+          ? this.currentSilde--
+          : (this.currentSilde = this.slides - 1);
+      } else if (changeTo === "backwards") {
+        this.changeToDirection = "left";
+        this.currentSilde < this.slides - 1
+          ? this.currentSilde++
+          : (this.currentSilde = 0);
+      }
+    }
+  },
+  watch: {
+    // make pseudo buttons accessible, execute after slides first update
+    slides: function() {
+      this.$nextTick(() => {
+        const buttons = document.querySelectorAll(".navigation");
+        for (let button of buttons) {
+          button.setAttribute("tabindex", "0");
+          button.setAttribute("role", "button");
+          button.setAttribute("aria-label", `carousel ${button.id} button`);
+          button.style.cursor = "pointer";
         }
       });
     }
