@@ -1,33 +1,33 @@
-@import '@/assets/css/_shared';
+@import "@/assets/css/_shared";
 
 .slideDown-enter-active {
-    animation: fadeInDown $speed500;
+  animation: fadeInDown $speed500;
 }
 
 .slideDown-leave-active {
-    animation: fadeOut $speed300;
+  animation: fadeOut $speed300;
 }
 
 .zoom-enter-active {
-    animation: zoomIn $speed500;
+  animation: zoomIn $speed500;
 }
 
 .zoom-leave-active {
-    animation: fadeOut $speed300;
+  animation: fadeOut $speed300;
 }
 
 .slideLeft-enter-active {
-    animation: slideInLeft $speed700;
+  animation: slideInLeft $speed700;
 }
 
 .slideLeft-leave-active {
-    animation: slideOutRight $speed700;
+  animation: slideOutRight $speed700;
 }
 
 .slideRight-enter-active {
-    animation: slideInRight $speed700;
+  animation: slideInRight $speed700;
 }
 
 .slideRight-leave-active {
-    animation: slideOutLeft $speed700;
+  animation: slideOutLeft $speed700;
 }

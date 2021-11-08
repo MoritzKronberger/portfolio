@@ -2,215 +2,225 @@
 
 // font sizes for media queries
 $font-sizes: (
-    main: (
-        regular: (
-            huge: 3.9375rem,
-            big: 1.9375rem,
-            regular: 1rem,
-            small: .6875rem,
-            tiny: .5rem
-        ),
-        tablet: (
-            huge: 2.25rem,
-            big: 1.8125rem
-        ),
-        mobile: (
-            huge: 2rem,
-            big: 1.5rem
-        )
+  main: (
+    regular: (
+      huge: 3.9375rem,
+      big: 1.9375rem,
+      regular: 1rem,
+      small: 0.6875rem,
+      tiny: 0.5rem
     ),
-    code: (
-        regular: (
-            huge: 3.5rem,
-            big: 1.71875rem,
-            regular: .89375rem,
-            small: .6125rem,
-            tiny: .45
-        ),
-        tablet: (
-            big: 1.125rem,
-        ),
-        mobile: (
-            huge: 2.75rem,
-            big: 1rem,
-        )
+    tablet: (
+      huge: 2.25rem,
+      big: 1.8125rem
     ),
-    border: (
-        regular: (
-            regular: 3px
-        ),
-        tablet: (
-            regular: 2.5px
-        )
+    mobile: (
+      huge: 2rem,
+      big: 1.5rem
     )
+  ),
+  code: (
+    regular: (
+      huge: 3.5rem,
+      big: 1.71875rem,
+      regular: 0.89375rem,
+      small: 0.6125rem,
+      tiny: 0.45
+    ),
+    tablet: (
+      big: 1.125rem
+    ),
+    mobile: (
+      huge: 2.75rem,
+      big: 1rem
+    )
+  ),
+  border: (
+    regular: (
+      regular: 3px
+    ),
+    tablet: (
+      regular: 2.5px
+    )
+  )
 );
 
 // main-"grid" sizes for media queries
 $main-columns: (
-    regular: (
-        width: 360px,
-        height: 120px,
-        gap: 290px,
-        flex-direction: row,
-        article-width: 2 * 360px + .5 * 290px
-    ),
-    tablet: (
-        width: 224px,
-        height: 80px,
-        gap: 128px,
-        article-width: 2 * (224px + 128px)
-    ),
-    mobile: (
-        width: 224px,
-        height: 64px,
-        gap: 2.25rem,
-        flex-direction: column,
-        article-width: 2 * (224px + 36px)
-    )
+  regular: (
+    width: 360px,
+    height: 120px,
+    gap: 290px,
+    flex-direction: row,
+    article-width: 2 * 360px + 0.5 * 290px
+  ),
+  tablet: (
+    width: 224px,
+    height: 80px,
+    gap: 128px,
+    article-width: 2 *
+      (
+        224px + 128px
+      )
+  ),
+  mobile: (
+    width: 224px,
+    height: 64px,
+    gap: 2.25rem,
+    flex-direction: column,
+    article-width: 2 *
+      (
+        224px + 36px
+      )
+  )
 );
 
 // header-"grid" sizes for media queries
 $header-columns: (
-    regular: (
-        width:  map-get(map-get($main-columns, regular), width),
-        height: map-get(map-get($main-columns, regular), height),
-        gap:    map-get(map-get($main-columns, regular), gap)
-    ),
-    tablet: (
-        width:  map-get(map-get($main-columns, tablet), width),
-        height: map-get(map-get($main-columns, tablet), height),
-        gap:    map-get(map-get($main-columns, tablet), gap)
-    ),
-    mobile: (
-        width: auto,
-        height: 80px,
-        gap: 3rem
-    )
+  regular: (
+    width: map-get(map-get($main-columns, regular), width),
+    height: map-get(map-get($main-columns, regular), height),
+    gap: map-get(map-get($main-columns, regular), gap)
+  ),
+  tablet: (
+    width: map-get(map-get($main-columns, tablet), width),
+    height: map-get(map-get($main-columns, tablet), height),
+    gap: map-get(map-get($main-columns, tablet), gap)
+  ),
+  mobile: (
+    width: auto,
+    height: 80px,
+    gap: 3rem
+  )
 );
 
 // margin sizes for media queries
 $margins: (
-    global: (
-        regular: (
-            sides: 2.25rem,
-            top: 1.25rem,
-            small: .6rem
-        ),
-        mobile: (
-            top: 0
-        )
+  global: (
+    regular: (
+      sides: 2.25rem,
+      top: 1.25rem,
+      small: 0.6rem
     ),
-    header: (
-        regular: (
-            top: 1.5rem,
-            bottom: 1.5rem
-        )
-    ),
-    footer: (
-        regular: (
-            top: 3rem,
-            bottom: 2rem,
-            icons-bottom: .7rem,
-            between-socials: 1rem,
-            icon-size: 1.75rem
-        ),
-        tablet: (
-            icon-size: 1.6rem
-        ),
-        mobile: (
-            between-socials: 1.5rem,
-            icon-size: 1.5rem
-        )
-    ),
-    index: (
-        regular: (
-            top: 0
-        ),
-        mobile: (
-            top: 1rem
-        )
-    ),
-    about: (
-        regular: (
-            bottom: 11%,
-            icon-width: 2rem,
-            icon-bottom: 2.25rem,
-            h2-bottom: 2rem
-        ),
-        tablet: (
-            bottom: 4%,
-            icon-width: 1.75rem,
-            icon-bottom: 1.65rem,
-            h2-bottom: 1.3rem
-        ),
-        mobile: (
-            bottom: 16%,
-            icon-width: 1.625rem,
-            icon-bottom: 1.2rem,
-            h2-bottom: 1rem
-        )
-    ),
-    postList: (
-        regular: (
-            items-bottom: 2rem,
-            text-around: 1rem,
-            h2-hidden: .5rem,
-            hide-percent: 89%
-        ),
-        tablet: (
-            h2-hidden: .2rem,
-            hide-percent: 87%
-        ),
-        mobile: (
-            items-bottom: 2.5rem
-        )
-    ),
-    slug: (
-        regular:  (
-            h1-top: 7rem,
-            frontMatter: 3rem,
-        ),
-        tablet: (
-            h1-top: 3rem,
-            frontMatter: 2.25rem
-        ),
-        mobile: (
-            h1-top: 1.5rem,
-            frontMatter: 2rem
-        )
-    ),
-    carousel: (
-        regular:  (
-            width: 80%,
-            navigation-icon-size: 2.25rem,
-            backwards-offset: -.75rem,
-            forwards-offset: -.72rem,
-            pagination-top: .5rem,
-            pagination-diameter: .55rem,
-            pagination-spacing: .25rem,
-            pagination-border: 1.5px
-        ),
-        tablet: (
-            pagination-diameter: .62rem,
-            pagination-spacing: .35rem
-        ),
-        mobile: (
-            width: 100%,
-            pagination-top: .65rem,
-            pagination-diameter: .57rem,
-            pagination-spacing: .5rem
-        )
+    mobile: (
+      top: 0
     )
+  ),
+  header: (
+    regular: (
+      top: 1.5rem,
+      bottom: 1.5rem
+    )
+  ),
+  footer: (
+    regular: (
+      top: 3rem,
+      bottom: 2rem,
+      icons-bottom: 0.7rem,
+      between-socials: 1rem,
+      icon-size: 1.75rem
+    ),
+    tablet: (
+      icon-size: 1.6rem
+    ),
+    mobile: (
+      between-socials: 1.5rem,
+      icon-size: 1.5rem
+    )
+  ),
+  index: (
+    regular: (
+      top: 0
+    ),
+    mobile: (
+      top: 1rem
+    )
+  ),
+  about: (
+    regular: (
+      bottom: 11%,
+      icon-width: 2rem,
+      icon-bottom: 2.25rem,
+      h2-bottom: 2rem
+    ),
+    tablet: (
+      bottom: 4%,
+      icon-width: 1.75rem,
+      icon-bottom: 1.65rem,
+      h2-bottom: 1.3rem
+    ),
+    mobile: (
+      bottom: 16%,
+      icon-width: 1.625rem,
+      icon-bottom: 1.2rem,
+      h2-bottom: 1rem
+    )
+  ),
+  postList: (
+    regular: (
+      items-bottom: 2rem,
+      text-around: 1rem,
+      h2-hidden: 0.5rem,
+      hide-percent: 89%
+    ),
+    tablet: (
+      h2-hidden: 0.2rem,
+      hide-percent: 87%
+    ),
+    mobile: (
+      items-bottom: 2.5rem
+    )
+  ),
+  slug: (
+    regular: (
+      h1-top: 7rem,
+      frontMatter: 3rem
+    ),
+    tablet: (
+      h1-top: 3rem,
+      frontMatter: 2.25rem
+    ),
+    mobile: (
+      h1-top: 1.5rem,
+      frontMatter: 2rem
+    )
+  ),
+  carousel: (
+    regular: (
+      width: 80%,
+      navigation-icon-size: 2.25rem,
+      backwards-offset: -0.75rem,
+      forwards-offset: -0.72rem,
+      pagination-top: 0.5rem,
+      pagination-diameter: 0.55rem,
+      pagination-spacing: 0.25rem,
+      pagination-border: 1.5px
+    ),
+    tablet: (
+      pagination-diameter: 0.62rem,
+      pagination-spacing: 0.35rem
+    ),
+    mobile: (
+      width: 100%,
+      pagination-top: 0.65rem,
+      pagination-diameter: 0.57rem,
+      pagination-spacing: 0.5rem
+    )
+  )
 );
 
-// specify custom property-maps to include 
+// specify custom property-maps to include
 $customProps: (
-    fs-main: map-get($font-sizes, main),
-    fs-code: map-get($font-sizes, code),
-    fs-border: map-get($font-sizes, border),
-    clm: $main-columns,
-    hdc: $header-columns
+  fs-main: map-get($font-sizes, main),
+  fs-code: map-get($font-sizes, code),
+  fs-border: map-get($font-sizes, border),
+  clm: $main-columns,
+  hdc: $header-columns
 );
 @each $component, $sizes in $margins {
-    $customProps: map.set( $customProps, mrg-#{$component}, map-get($margins, #{$component}) );
-};
+  $customProps: map.set(
+    $customProps,
+    mrg-#{$component},
+    map-get($margins, #{$component})
+  );
+}

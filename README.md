@@ -23,7 +23,7 @@ For detailed explanation on how things work, check out the [documentation](https
 
 For more information about the rules for project entries check out the dedicated readmes for both the [markdown](./content/projects/markdown/README.md) and [thumbnails](./content/projects/assets/images/README.md).
 
-Changes to the project entries should be commited to the **publish** branch to quickly be merged into the **main** branch and deployed using the command:
+Changes to the project entries can be commited to the **publish** branch to quickly be merged into the **main** branch and deployed using the command:
 
 ```bash
 # merge branch publish into main
@@ -44,13 +44,13 @@ More information about the usage of this directory in [the documentation](https:
 
 The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
 
-More information about the usage of this directory in [the documentation](https://content.nuxtjs.org/).
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
 
 ### `content`
 
-The content directory contains the directories and data for use with the Nuxt Content module.
+The content directory contains the directories and files for use with the Nuxt Content module.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+More information about the usage of this directory in [the documentation](https://content.nuxtjs.org/).
 
 ### `layouts`
 

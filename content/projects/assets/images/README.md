@@ -14,7 +14,7 @@
 
 ## Post images
 
-1. The image width should be 1400 pixels
+1. The image width should be 1000 pixels
 2. The supported file types are png, jpg, jpeg and webp
 
 ## Carousel Images

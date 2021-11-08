@@ -59,72 +59,75 @@
                 })
             }
         }
+      });
     }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
-    @use "sass:list";
-    @import '@/assets/css/_shared';
+@use "sass:list";
+@import "@/assets/css/_shared";
 
-    #carousel {
-        width: 100%;
-    }
+#carousel {
+  width: 100%;
+}
 
-    #carouselRelative {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-    }
+#carouselRelative {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
 
-    #slideWrapper {
-        position: relative;
-        width: v(mrg-carousel-width);
-        aspect-ratio: 21 / 10;
-        margin: 0 auto;
-        overflow: hidden;
-    }
+#slideWrapper {
+  position: relative;
+  width: v(mrg-carousel-width);
+  aspect-ratio: 21 / 10;
+  margin: 0 auto;
+  overflow: hidden;
+}
 
-    .navigation {
-        -moz-user-select: -moz-none;
-        -khtml-user-select: none;
-        -webkit-user-select: none;
-        -o-user-select: none;
-        user-select: none;
-    }
+.navigation {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
 
-    .navigation {
-        position: absolute;
-        line-height: 0;
-        top: 50%;
-    }
+.navigation {
+  position: absolute;
+  line-height: 0;
+  top: 50%;
+}
 
-    .material-icons-sharp.navigation {
-        margin-left: v(mrg-carousel-backwards-offset);
-        margin-right: v(mrg-carousel-forwards-offset);
-        color: $offBlack;
-        font-size: v(mrg-carousel-navigation-icon-size);
-    }
+.material-icons-sharp.navigation {
+  margin-left: v(mrg-carousel-backwards-offset);
+  margin-right: v(mrg-carousel-forwards-offset);
+  color: $offBlack;
+  font-size: v(mrg-carousel-navigation-icon-size);
+}
 
-    #forwards {
-        right: 0;
-    }
+#forwards {
+  right: 0;
+}
 
-    #backwards {
-        left: 0;
-    }
+#backwards {
+  left: 0;
+}
 
-    .pagination {
-        color: $offBlack-inactive;
-        @include font($code, regular);
-        text-align: center;
-        margin: v(mrg-carousel-pagination-top) 0 v(mrg-slug-frontMatter);
-    }
+.pagination {
+  color: $offBlack-inactive;
+  @include font($code, regular);
+  text-align: center;
+  margin: v(mrg-carousel-pagination-top) 0 v(mrg-slug-frontMatter);
+}
 
-    .pagination #active{
-        color: $offBlack;
-    }
+.pagination #active {
+  color: $offBlack;
+}
 
-    #true {
-        background-color: $offBlack;
-    }
+#true {
+  background-color: $offBlack;
+}
 </style>
