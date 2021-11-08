@@ -4,13 +4,13 @@
 
 <script>
 export default {
-    props: {
-        href: {
-            required: true
-        },
-        desc: {
-            required: true
-        }
+  props: {
+    href: {
+      required: true
+    },
+    desc: {
+      required: true
     }
-}
+  }
+};
 </script>

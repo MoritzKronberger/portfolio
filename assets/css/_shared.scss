@@ -1,94 +1,94 @@
 // colors
-$offWhite: #FBFBFB;
+$offWhite: #fbfbfb;
 $offBlack: #222222;
 $offBlack-inactive: #7c7c7c;
 
 // custom property helper function
-@function v($property){
-    @return var(--#{$property});
+@function v($property) {
+  @return var(--#{$property});
 }
 
 //fonts
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Sharp');
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Sharp");
 
-// simplified efficient font stack by:
+// simplified efficient font stack derived from:
 // https://gist.github.com/fabricelejeune/bcdd3d4725d4e4cea672
 
-$fontFamily-main: ('Atkinson Hyperlegible', 'Arial', sans-serif);
-$fontFamily-code: ('Roboto Mono', 'Courier New', monospace);
+$fontFamily-main: ("Atkinson Hyperlegible", "Arial", sans-serif);
+$fontFamily-code: ("Roboto Mono", "Courier New", monospace);
 
 $main: (
-    huge: (
-        family: $fontFamily-main,
-        weight: 700,
-        size: v(fs-main-huge)
-    ),
-    big: (
-        family: $fontFamily-main,
-        weight: 400,
-        size: v(fs-main-big)
-    ),
-    regular: (
-        family: $fontFamily-main,
-        weight: 400,
-        size: v(fs-main-regular)
-    ),
-    small: (
-        family: $fontFamily-main,
-        weight: 400,
-        size: v(fs-main-small)
-    ),
-    tiny: (
-        family: $fontFamily-main,
-        weight: 400,
-        size: v(fs-main-tiny)
-    )
+  huge: (
+    family: $fontFamily-main,
+    weight: 700,
+    size: v(fs-main-huge)
+  ),
+  big: (
+    family: $fontFamily-main,
+    weight: 400,
+    size: v(fs-main-big)
+  ),
+  regular: (
+    family: $fontFamily-main,
+    weight: 400,
+    size: v(fs-main-regular)
+  ),
+  small: (
+    family: $fontFamily-main,
+    weight: 400,
+    size: v(fs-main-small)
+  ),
+  tiny: (
+    family: $fontFamily-main,
+    weight: 400,
+    size: v(fs-main-tiny)
+  )
 );
 
 $code: (
-    huge: (
-        family: $fontFamily-code,
-        weight: 700,
-        size: v(fs-code-huge)
-    ),
-    big: (
-        family: $fontFamily-code,
-        weight: 700,
-        size: v(fs-code-big)
-    ),
-    regular: (
-        family: $fontFamily-code,
-        weight: 400,
-        size: v(fs-code-regular)
-    ),
-    small: (
-        family: $fontFamily-code,
-        weight: 400,
-        size: v(fs-code-small)
-    ),
-    tiny: (
-        family: $fontFamily-code,
-        weight: 400,
-        size: v(fs-code-tiny)
-    )
+  huge: (
+    family: $fontFamily-code,
+    weight: 700,
+    size: v(fs-code-huge)
+  ),
+  big: (
+    family: $fontFamily-code,
+    weight: 700,
+    size: v(fs-code-big)
+  ),
+  regular: (
+    family: $fontFamily-code,
+    weight: 400,
+    size: v(fs-code-regular)
+  ),
+  small: (
+    family: $fontFamily-code,
+    weight: 400,
+    size: v(fs-code-small)
+  ),
+  tiny: (
+    family: $fontFamily-code,
+    weight: 400,
+    size: v(fs-code-tiny)
+  )
 );
 
 @mixin font($font-stack, $variant, $properties: family weight size) {
-    $font-properties: map-get($font-stack, $variant);
+  $font-properties: map-get($font-stack, $variant);
 
-    @if $font-properties {
-        @each $property, $values in $font-properties {
-            @if contains($properties, $property) {
-                font-#{$property}: map-get($font-properties, $property);
-            }
-        }
+  @if $font-properties {
+    @each $property, $values in $font-properties {
+      @if contains($properties, $property) {
+        font-#{$property}: map-get($font-properties, $property);
+      }
     }
+  }
 }
 
 // animation speeds
-$speed700: .35s;
-$speed500: .2s;
-$speed400: .15s;
-$speed300: .1s;
+$speed700: 0.35s;
+$speed500: 0.2s;
+$speed400: 0.15s;
+$speed300: 0.1s;

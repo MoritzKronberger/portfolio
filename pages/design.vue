@@ -1,18 +1,18 @@
 <template>
-  <PostList :category="category"/>
+  <PostList :category="category" />
 </template>
 
 <script>
-import PostList from '../components/PostList.vue'
+import PostList from "../components/PostList.vue";
 export default {
   components: {
     PostList
   },
-  data(){
+  data() {
     return {
-      category: 'design',
-      metaName: 'design'
-    }
+      category: "design",
+      metaName: "design"
+    };
   }
-}
+};
 </script>

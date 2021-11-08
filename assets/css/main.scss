@@ -1,63 +1,62 @@
-@import '@/assets/css/_shared';
-@import '@/assets/css/custom_props';
-@import '@/assets/css/breakpoints';
+@import "@/assets/css/_shared";
+@import "@/assets/css/custom_props";
+@import "@/assets/css/breakpoints";
 
-@mixin setCustomPropIf($map, $condition, $prefix){
-    @each $size, $elements in $map {
-        @if $size == $condition {
-            @each $element, $value in $elements {
-                --#{$prefix}-#{$element}: #{$value};
-            }
-        }
+@mixin setCustomPropIf($map, $condition, $prefix) {
+  @each $size, $elements in $map {
+    @if $size == $condition {
+      @each $element, $value in $elements {
+        --#{$prefix}-#{$element}: #{$value};
+      }
     }
+  }
 }
 
 :root {
-    font-size: 16px;
+  font-size: 16px;
 
-    // set custom properties for all breakpoints
-    @each $prop, $map in $customProps {
-        @include setCustomPropIf($map, regular, $prop);
-    };
-    @each $breakpoint, $value in $breakpoints {
-        @media only screen and(max-width: $value) {
-            @each $prop, $map in $customProps {
-                @include setCustomPropIf($map, $breakpoint, $prop);
-            };  
-        };
+  // set custom properties for all breakpoints
+  @each $prop, $map in $customProps {
+    @include setCustomPropIf($map, regular, $prop);
+  }
+  @each $breakpoint, $value in $breakpoints {
+    @media only screen and(max-width: $value) {
+      @each $prop, $map in $customProps {
+        @include setCustomPropIf($map, $breakpoint, $prop);
+      }
     }
+  }
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: $offWhite;
-    color: $offBlack;
-    @include font($main, regular);
+  background-color: $offWhite;
+  color: $offBlack;
+  @include font($main, regular);
 }
 
 ::selection {
-    background: $offBlack;
-    color: $offWhite;
+  background: $offBlack;
+  color: $offWhite;
 }
 
 ::-moz-selection {
-    background: $offBlack;
-    color: $offWhite;
+  background: $offBlack;
+  color: $offWhite;
 }
 
 .bodyDiv {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-        "header"
-        "main"
-        "footer"
-    ;
-    min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  min-height: 100vh;
 }
