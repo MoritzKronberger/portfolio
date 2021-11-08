@@ -4,18 +4,16 @@
                 <div id="slideWrapper">
                     <slot :current-slide="this.currentSilde" :change-to-direction="this.changeToDirection"/>
                 </div>
-            <span v-show="this.navigation" 
-                  class="material-icons-sharp navigation" 
+            <span class="material-icons-sharp navigation" 
                   id="backwards" 
                   @click="changeSlide('backwards')"
                   >navigate_before</span>
-            <span v-show="this.navigation" 
-                  class="material-icons-sharp navigation" 
+            <span class="material-icons-sharp navigation" 
                   id="forwards" 
                   @click="changeSlide('forwards')"
                   >navigate_next</span>
             </div>
-            <div v-show="this.pagination" class="pagination">
+            <div class="pagination">
                 <span id="active">{{ this.currentSilde + 1}}</span>/{{ this.slides }}
             </div>
         </div>
@@ -24,14 +22,6 @@
 <script>
     export default {
         props: {
-            navigation: {
-                type: Boolean,
-                default: true
-            },
-            pagination: {
-                type: Boolean,
-                default: true
-            },
             slides: {
                 type: Number,
                 default: 0,
@@ -47,19 +37,16 @@
         methods: {
             changeSlide(changeTo) {
                 if(changeTo === 'forwards') {
-                    this.changeToDirection = 'left'
-                    this.currentSilde < this.slides-1 ? this.currentSilde++ : this.currentSilde=0
-                } else if (changeTo === 'backwards') {
                     this.changeToDirection = 'right'
                     this.currentSilde > 0  ? this.currentSilde-- : this.currentSilde = this.slides-1
-                } else if (changeTo >= 0 && changeTo < this.slides) {
-                    changeTo > this.currentSilde ? this.changeToDirection = 'left' : this.changeToDirection = 'right'
-                    this.currentSilde = changeTo
+                } else if (changeTo === 'backwards') {
+                    this.changeToDirection = 'left'
+                    this.currentSilde < this.slides-1 ? this.currentSilde++ : this.currentSilde=0
                 }
             }
         },
         watch: {
-            // make pseudo buttons accssessible, execute after slides first update   
+            // make pseudo buttons accessible, execute after slides first update   
             slides: function (){
                 this.$nextTick(() => {
                     const buttons = document.querySelectorAll('.navigation')
