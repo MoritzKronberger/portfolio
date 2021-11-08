@@ -9,7 +9,7 @@ tech: Vue.js, Express, PostgreSQL, Keras, Tensorflow.js
 team: {Stefanie Jany: https://www.linkedin.com/in/stefanie-jany-53383b197/, 
        Lea Jell: https://www.linkedin.com/in/lea-jell-3a3b681b5/, 
        Eva Kunzmann: https://github.com/fox7sake, 
-       Anja Krendliner: https://www.linkedin.com/in/anjakr/, 
+       Anja Krendlinger: https://www.linkedin.com/in/anjakr/, 
        Martin Kohnle: https://www.linkedin.com/in/martin-kohnle-504b2b1ba/, 
        Kieu Pham: https://www.linkedin.com/in/kieu-pham-5b6456223/}
 role: Neural Network, dataset creation, Postgres database
