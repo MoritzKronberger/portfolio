@@ -3,15 +3,15 @@
     <div class="socialLinks">
       <a
         href="https://github.com/MoritzKronberger"
-        v-html="rawGithubIcon"
         title="Link to my GitHub profile"
       >
+        <div v-html="rawGithubIcon" aria-hidden="true"></div>
       </a>
       <a
         href="https://www.linkedin.com/in/moritz-kronberger-a17211222/"
-        v-html="rawLinkedinIcon"
         title="Link to my LinkedIn page"
       >
+        <div v-html="rawLinkedinIcon" aria-hidden="true"></div>
       </a>
     </div>
     <p>© Moritz Kronberger 2021</p>
