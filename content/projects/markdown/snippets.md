@@ -15,7 +15,7 @@ team: {Lea Jell: https://www.linkedin.com/in/lea-jell-3a3b681b5/,
 role: Postgres database, Docker, Wireframing
 ---
 
-The full stack web application 'Snippets' allows its users to share short code snippets in a Twitter-like format. As most social media platforms, users can interact with posts through likes and comments.
+The full stack web application 'Snippets' allows its users to share short code snippets in a Twitter-like format. As with most social media platforms, users can interact with posts through likes and comments.
 <br></br>
 My main contributions to the project were the design of a robust PostgreSQL database, including its dockerization and the backend database queries, as well as the basic initial [wireframing](https://www.figma.com/file/XrzFeX33r2VXlSoyrPhYdj/GruppenprojektWebprog?node-id=203%3A83) using Figma.
 <br></br>
