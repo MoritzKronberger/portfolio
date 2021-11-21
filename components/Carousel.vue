@@ -66,6 +66,7 @@ export default {
           button.setAttribute("tabindex", "0");
           button.setAttribute("role", "button");
           button.setAttribute("aria-label", `carousel ${button.id} button`);
+          button.onkeydown = (e) => {e.keyCode === 13 ? this.changeSlide(button.id) : ""}
           button.style.cursor = "pointer";
         }
       });

@@ -133,12 +133,12 @@ img {
   object-fit: cover;
 }
 
-a:hover .cardInfo {
+a:matches(:hover, :focus-visible) .cardInfo {
   transform: translateY(v(mrg-postList-hide-percent));
   transition: transform $revealSpeed;
 }
 
-a:hover h2 {
+a:matches(:hover, :focus-visible) h2 {
   margin-top: v(mrg-postList-h2-hidden);
   transition: margin-top $revealSpeed;
 }

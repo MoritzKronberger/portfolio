@@ -58,7 +58,7 @@ a {
   align-items: center;
 }
 
-a:hover {
+a:matches(:hover, :focus-visible) {
   animation: fill $speed300;
   animation-fill-mode: both;
   border: solid v(fs-border-regular) $offBlack;

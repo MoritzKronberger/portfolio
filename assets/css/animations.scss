@@ -20,7 +20,7 @@
     transition: background-size $speed linear;
   }
 
-  #{$element}:hover {
+  #{$element}:matches(:hover, :focus-visible) {
     background-size: 100% $height;
     transition: background-size $speed linear;
   }

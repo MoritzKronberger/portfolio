@@ -16,19 +16,19 @@ export default {
   mounted() {
     // remove underline from nuxt-link-exact-active when hovering over other nav link
     const nuxtLinks = document.getElementsByClassName("nuxtLink");
+    const toggleUnderline = (enter) => {
+      const activeNuxtLink = document.getElementsByClassName(
+        "nuxt-link-exact-active"
+      )[0];
+      if (activeNuxtLink){
+        enter ? activeNuxtLink.classList.add("noUnderline") : activeNuxtLink.classList.remove("noUnderline");
+      } 
+    }
     for (let link of nuxtLinks) {
-      link.onmouseover = () => {
-        const activeNuxtLink = document.getElementsByClassName(
-          "nuxt-link-exact-active"
-        )[0];
-        activeNuxtLink ? activeNuxtLink.classList.add("noUnderline") : "";
-      };
-      link.onmouseout = () => {
-        const activeNuxtLink = document.getElementsByClassName(
-          "nuxt-link-exact-active"
-        )[0];
-        activeNuxtLink ? activeNuxtLink.classList.remove("noUnderline") : "";
-      };
+      link.onmouseover = () => toggleUnderline(true);
+      link.onfocus = () => toggleUnderline(true);
+      link.onmouseout = () => toggleUnderline(false);
+      link.onblur = () => toggleUnderline(false);
     }
 
     // hide navbar on scroll down

@@ -72,7 +72,7 @@ a {
     fill: $offBlack;
   }
 
-  a:hover {
+  a:matches(:hover, :focus-visible) {
     svg {
       animation: pinch $speed500;
       animation-fill-mode: both;
