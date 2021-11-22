@@ -7,13 +7,13 @@
 <script>
 export default {
   props: {
-    transitionName: String
-  }
-};
+    transitionName: String,
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/css/transitions";
+@import '@/assets/css/transitions';
 
 * {
   width: 100%;

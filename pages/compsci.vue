@@ -3,16 +3,16 @@
 </template>
 
 <script>
-import PostList from "../components/PostList.vue";
+import PostList from '../components/PostList.vue'
 export default {
   components: {
-    PostList
+    PostList,
   },
   data() {
     return {
-      category: "compsci",
-      metaName: "compsci"
-    };
-  }
-};
+      category: 'compsci',
+      metaName: 'compsci',
+    }
+  },
+}
 </script>

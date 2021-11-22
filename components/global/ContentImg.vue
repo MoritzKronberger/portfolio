@@ -7,16 +7,16 @@
 export default {
   props: {
     src: {
-      required: true
+      required: true,
     },
     alt: {
-      required: true
-    }
+      required: true,
+    },
   },
   methods: {
     imgSrc() {
-      return require(`~/content/${this.src}`);
-    }
-  }
-};
+      return require(`~/content/${this.src}`)
+    },
+  },
+}
 </script>

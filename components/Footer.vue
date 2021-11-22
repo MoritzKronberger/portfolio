@@ -19,18 +19,18 @@
 </template>
 
 <script>
-import rawGithubIcon from "~/assets/icons/gitHub.svg?raw";
-import rawLinkedinIcon from "~/assets/icons/linkedIn.svg?raw";
+import rawGithubIcon from '~/assets/icons/gitHub.svg?raw'
+import rawLinkedinIcon from '~/assets/icons/linkedIn.svg?raw'
 
 export default {
   data() {
-    return { rawGithubIcon, rawLinkedinIcon };
-  }
-};
+    return { rawGithubIcon, rawLinkedinIcon }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/css/_shared";
+@import '@/assets/css/_shared';
 
 footer {
   margin: v(mrg-footer-top) 0 v(mrg-footer-bottom);
@@ -60,8 +60,8 @@ a {
 </style>
 
 <style lang="scss">
-@import "@/assets/css/_shared";
-@import "@/assets/css/animations";
+@import '@/assets/css/_shared';
+@import '@/assets/css/animations';
 
 .socialLinks {
   svg {

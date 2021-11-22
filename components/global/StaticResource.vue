@@ -6,11 +6,11 @@
 export default {
   props: {
     href: {
-      required: true
+      required: true,
     },
     desc: {
-      required: true
-    }
-  }
-};
+      required: true,
+    },
+  },
+}
 </script>
