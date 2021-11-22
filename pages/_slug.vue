@@ -62,31 +62,31 @@
 <script>
 export default {
   async asyncData({ $content, params }) {
-    const post = await $content("projects/markdown", params.slug).fetch();
-    return { post };
+    const post = await $content('projects/markdown', params.slug).fetch()
+    return { post }
   },
   data() {
     return {
-      testData: "",
+      testData: '',
       carouselResources: [],
-      transitions: { right: "slideRight", left: "slideLeft" }
-    };
+      transitions: { right: 'slideRight', left: 'slideLeft' },
+    }
   },
   mounted() {
     this.loadResources(
       require.context(`~/content/projects/assets/images`, true, /carousel/)
-    );
+    )
   },
   methods: {
     async loadResources(r) {
       for (const key of r.keys()) {
-        const splitPath = key.split("/");
-        const path = splitPath[splitPath.indexOf("carousel") - 1];
+        const splitPath = key.split('/')
+        const path = splitPath[splitPath.indexOf('carousel') - 1]
         if (path === this.post.slug) {
-          this.carouselResources.push(r(key));
+          this.carouselResources.push(r(key))
         }
       }
-    }
+    },
   },
   head() {
     return {
@@ -94,19 +94,19 @@ export default {
       meta: [
         {
           hid: `desc-${this.post.slug}`,
-          name: "description",
+          name: 'description',
           content: this.post.meta_desc
             ? this.post.meta_desc
-            : `${this.post.title}: A ${this.post.category} project`
-        }
-      ]
-    };
-  }
-};
+            : `${this.post.title}: A ${this.post.category} project`,
+        },
+      ],
+    }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/css/_shared";
+@import '@/assets/css/_shared';
 
 main {
   grid-area: main;
@@ -150,7 +150,7 @@ a {
 
 <style lang="scss">
 // style content generated from .md-files:
-@import "@/assets/css/_shared";
+@import '@/assets/css/_shared';
 
 .nuxt-content {
   h2 {

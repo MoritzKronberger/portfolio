@@ -15,39 +15,41 @@
 export default {
   mounted() {
     // remove underline from nuxt-link-exact-active when hovering over other nav link
-    const nuxtLinks = document.getElementsByClassName("nuxtLink");
-    const toggleUnderline = (enter) => {
+    const nuxtLinks = document.getElementsByClassName('nuxtLink')
+    const toggleUnderline = enter => {
       const activeNuxtLink = document.getElementsByClassName(
-        "nuxt-link-exact-active"
-      )[0];
-      if (activeNuxtLink){
-        enter ? activeNuxtLink.classList.add("noUnderline") : activeNuxtLink.classList.remove("noUnderline");
-      } 
+        'nuxt-link-exact-active'
+      )[0]
+      if (activeNuxtLink) {
+        enter
+          ? activeNuxtLink.classList.add('noUnderline')
+          : activeNuxtLink.classList.remove('noUnderline')
+      }
     }
     for (let link of nuxtLinks) {
-      link.onmouseover = () => toggleUnderline(true);
-      link.onfocus = () => toggleUnderline(true);
-      link.onmouseout = () => toggleUnderline(false);
-      link.onblur = () => toggleUnderline(false);
+      link.onmouseover = () => toggleUnderline(true)
+      link.onfocus = () => toggleUnderline(true)
+      link.onmouseout = () => toggleUnderline(false)
+      link.onblur = () => toggleUnderline(false)
     }
 
     // hide navbar on scroll down
-    const navBar = document.getElementsByTagName("nav")[0];
+    const navBar = document.getElementsByTagName('nav')[0]
     this.$hideOnScrolldown(
       () => {
-        navBar.style.top = `-${navBar.offsetHeight}px`;
+        navBar.style.top = `-${navBar.offsetHeight}px`
       },
       () => {
-        navBar.style.top = "0";
+        navBar.style.top = '0'
       }
-    );
-  }
-};
+    )
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/css/_shared";
-@import "@/assets/css/animations";
+@import '@/assets/css/_shared';
+@import '@/assets/css/animations';
 
 nav {
   grid-area: header;
@@ -85,7 +87,7 @@ $underlineWidth: 2px;
 $underlineSpeed: $speed400;
 
 @include hoverUnderline(
-  "a",
+  'a',
   $underlineWidth,
   92%,
   50%,

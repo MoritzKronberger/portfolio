@@ -21,20 +21,20 @@
 </template>
 
 <script>
-import rawSelfIcon from "~/assets/icons/self.svg?raw";
+import rawSelfIcon from '~/assets/icons/self.svg?raw'
 
 export default {
   data() {
     return {
       rawSelfIcon,
-      metaName: "about"
-    };
-  }
-};
+      metaName: 'about',
+    }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/css/_shared";
+@import '@/assets/css/_shared';
 
 main {
   grid-area: main;
@@ -61,7 +61,7 @@ h2 {
 </style>
 
 <style lang="scss">
-@import "@/assets/css/_shared";
+@import '@/assets/css/_shared';
 
 #myIcon {
   line-height: 0;

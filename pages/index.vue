@@ -10,20 +10,20 @@
 <script>
 export default {
   transition(to) {
-    if (to.name === "index") {
-      return { name: "zoom", appear: true };
+    if (to.name === 'index') {
+      return { name: 'zoom', appear: true }
     }
   },
   data() {
     return {
-      metaName: "index"
-    };
-  }
-};
+      metaName: 'index',
+    }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/css/_shared";
+@import '@/assets/css/_shared';
 
 main {
   grid-area: main;

@@ -25,25 +25,25 @@
 export default {
   data() {
     return {
-      posts: ""
-    };
+      posts: '',
+    }
   },
-  props: ["category"],
+  props: ['category'],
   async fetch() {
-    let posts;
-    this.posts = await this.$content("projects/markdown")
+    let posts
+    this.posts = await this.$content('projects/markdown')
       .where({ category: this.category })
-      .sortBy("date", "desc")
-      .fetch();
-    return { posts };
-  }
-};
+      .sortBy('date', 'desc')
+      .fetch()
+    return { posts }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/css/_shared";
-@import "@/assets/css/breakpoints";
-@import "@/assets/css/animations";
+@import '@/assets/css/_shared';
+@import '@/assets/css/breakpoints';
+@import '@/assets/css/animations';
 
 $revealSpeed: $speed700;
 

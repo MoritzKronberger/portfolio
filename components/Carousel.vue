@@ -33,51 +33,53 @@ export default {
     slides: {
       type: Number,
       default: 0,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
       currentSilde: 0,
-      changeToDirection: ""
-    };
+      changeToDirection: '',
+    }
   },
   methods: {
     changeSlide(changeTo) {
-      if (changeTo === "forwards") {
-        this.changeToDirection = "right";
+      if (changeTo === 'forwards') {
+        this.changeToDirection = 'right'
         this.currentSilde < this.slides - 1
           ? this.currentSilde++
-          : (this.currentSilde = 0);
-      } else if (changeTo === "backwards") {
-        this.changeToDirection = "left";
+          : (this.currentSilde = 0)
+      } else if (changeTo === 'backwards') {
+        this.changeToDirection = 'left'
         this.currentSilde > 0
           ? this.currentSilde--
-          : (this.currentSilde = this.slides - 1);
+          : (this.currentSilde = this.slides - 1)
       }
-    }
+    },
   },
   watch: {
     // make pseudo buttons accessible, execute after slides first update
     slides: function() {
       this.$nextTick(() => {
-        const buttons = document.querySelectorAll(".navigation");
+        const buttons = document.querySelectorAll('.navigation')
         for (let button of buttons) {
-          button.setAttribute("tabindex", "0");
-          button.setAttribute("role", "button");
-          button.setAttribute("aria-label", `carousel ${button.id} button`);
-          button.onkeydown = (e) => {e.keyCode === 13 ? this.changeSlide(button.id) : ""}
-          button.style.cursor = "pointer";
+          button.setAttribute('tabindex', '0')
+          button.setAttribute('role', 'button')
+          button.setAttribute('aria-label', `carousel ${button.id} button`)
+          button.onkeydown = e => {
+            e.keyCode === 13 ? this.changeSlide(button.id) : ''
+          }
+          button.style.cursor = 'pointer'
         }
-      });
-    }
-  }
-};
+      })
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
 @use "sass:list";
-@import "@/assets/css/_shared";
+@import '@/assets/css/_shared';
 
 #carousel {
   width: 100%;
