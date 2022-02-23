@@ -2,21 +2,22 @@
 title: Learning Sign Language
 tags: deep-learning web-development keras tensorflow.js vue.js
 thumbnail: learning-sign-language.webp
-date: 2021-11-10
+date: 2022-02-14
 category: compsci
-meta_desc: Teaching sign language by providing live feedback on signs shown to a webcam
+meta_desc: Providing live feedback for sign language learners using Neural Networks for real time Sign Language Recognition
 carouselAlt: ["A mockup showing the landing page, home screen and exercise of the FLAI application on a MacBook", 
               "A mockup showing the FLAI landing page in a browser",
               "A mockup showing the FLAI home dashboard in a browser",
               "A mockup showing an example exercise in a browser"]
-tech: Keras, Tensorflow.js, Vue.js, Express, PostgreSQL
+tech: Keras, Tensorflow.js, Vue.js, Express, PostgreSQL, Docker
 team: {Stefanie Jany: https://www.linkedin.com/in/stefanie-jany-53383b197/, 
        Lea Jell: https://www.linkedin.com/in/lea-jell-3a3b681b5/, 
        Eva Kunzmann: https://github.com/fox7sake, 
        Anja Krendlinger: https://www.linkedin.com/in/anjakr/, 
        Martin Kohnle: https://www.linkedin.com/in/martin-kohnle-504b2b1ba/, 
        Kieu Pham: https://www.linkedin.com/in/kieu-pham-5b6456223/}
-role: Neural Network, dataset creation, Postgres database
+role: Neural Network + dataset, Postgres database, Vue.js frontend, Docker + CI/CD pipeline
+repo: {GitHub: https://github.com/MoritzKronberger/FLAI, Kaggle: https://www.kaggle.com/moritzkronberger/german-sign-language}
 ---
 
 'Learning Sign Language' is currently my main active project and part of my [European Project Semester](http://www.europeanprojectsemester.eu/).
