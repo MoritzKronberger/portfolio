@@ -5,6 +5,10 @@ thumbnail: learning-sign-language.webp
 date: 2021-11-10
 category: compsci
 meta_desc: Teaching sign language by providing live feedback on signs shown to a webcam
+carouselAlt: ["A mockup showing the landing page, home screen and exercise of the FLAI application on a MacBook", 
+              "A mockup showing the FLAI landing page in a browser",
+              "A mockup showing the FLAI home dashboard in a browser",
+              "A mockup showing an example exercise in a browser"]
 tech: Keras, Tensorflow.js, Vue.js, Express, PostgreSQL
 team: {Stefanie Jany: https://www.linkedin.com/in/stefanie-jany-53383b197/, 
        Lea Jell: https://www.linkedin.com/in/lea-jell-3a3b681b5/, 
@@ -14,10 +18,6 @@ team: {Stefanie Jany: https://www.linkedin.com/in/stefanie-jany-53383b197/,
        Kieu Pham: https://www.linkedin.com/in/kieu-pham-5b6456223/}
 role: Neural Network, dataset creation, Postgres database
 ---
-
-![A drawing of the German Sign Language signs for the letters f, l, a and i](../assets/images/learning-sign-language/flai.webp)
-
-<span id="imageSource">Illustration by [Stefanie Jany](https://www.linkedin.com/in/stefanie-jany-53383b197/)</span>
 
 'Learning Sign Language' is currently my main active project and part of my [European Project Semester](http://www.europeanprojectsemester.eu/).
 <br></br>
