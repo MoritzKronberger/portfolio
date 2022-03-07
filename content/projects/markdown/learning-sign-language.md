@@ -1,5 +1,5 @@
 ---
-title: FLAI – Learning Sign Language
+title: Learning Sign Language – FLAI
 tags: deep-learning web-development keras tensorflow.js vue.js typescript
 thumbnail: learning-sign-language.webp
 date: 2022-02-14
@@ -25,16 +25,17 @@ This project is the result of my [European Project Semester](http://www.european
 FLAI stands for 'Finger Language Artificial Intelligence' and is a full stack web application intended to teach its users the fundamentals of German Sign Language (DGS) - primarily the signed alphabet.
 The main goal was to build a prototypical technical framework that would support providing live feedback on signs shown into the webcam and tailoring a learning program to the individual user's progress.
 <br></br>
-While the project also included significant design aspects and efforts, my role focused on the project's technical challenges.
+While the project also included significant design aspects, my role focused on the project's technical challenges.
 
 ## Neural Network
 
 First and foremost, this involved researching, developing and evaluating possible solutions for a real time Sign Language Recognition system, necessary for the feedback functionality.
 Since it quickly showed that there were no publicly available datasets suitable for our use case, the main challenge became keeping our own dataset creation efforts suitable to the scope of a semester project.
-
+<br></br>
 Accessibility was chosen as the primary consideration for all project decisions. Therefore we opted for an ensemble of neural networks, mainly the [mediapipe handpose solution](https://google.github.io/mediapipe/solutions/hands.html) as a pre-processing step that provides robust data consisting of three-dimensional joint-vectors for our custom deep Self Normalizing Neural Network (SNN) to classify.
-This helped us overcome accessibility challenges related to the diversity of signers, lighting or backgrounds that would arise when creating a dataset for a purely end-to-end image-recognition-based solution from scratch.
 
+This helped us overcome accessibility challenges related to the diversity of signers, lighting or backgrounds that would arise when creating a dataset for a purely end-to-end image-recognition-based solution from scratch.
+<br></br>
 The SNN was trained and evaluated using Keras inside Jupyter Notebooks and converted to a TensorFlow.js layers model for frontend use.
 
 ## Database
@@ -44,7 +45,7 @@ on the database level. This includes automatic type casting and query building d
 
 ## Frontend
 
-For the frontend Vue.js Version 3 and TpeScript were chosen as our framework. This allows using the Vue composition API together with the script setup syntax and also made it possible to use reactive objects as a straightforward way of state management.
+For the frontend Vue.js Version 3 and TypeScript were chosen as our framework. This allows using the Vue composition API together with the script setup syntax and also made it possible to use reactive objects as a straightforward way of state management.
 
 Apart from general frontend development my task was the client-side implementation of our SLR solution using TensorFlow.js.
 
