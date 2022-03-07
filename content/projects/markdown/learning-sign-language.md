@@ -4,7 +4,7 @@ tags: deep-learning web-development keras tensorflow.js vue.js typescript
 thumbnail: learning-sign-language.webp
 date: 2022-02-14
 category: compsci
-meta_desc: Providing live feedback for sign language learners using Neural Networks for real time Sign Language Recognition
+meta_desc: Providing live feedback for sign language learners using neural networks for real time Sign Language Recognition
 carouselAlt: ["A mockup showing the landing page, home screen and exercise of the FLAI application on a MacBook", 
               "A mockup showing the FLAI landing page in a browser",
               "A mockup showing the FLAI home dashboard in a browser",
@@ -16,7 +16,7 @@ team: {Stefanie Jany: https://www.linkedin.com/in/stefanie-jany-53383b197/,
        Anja Krendlinger: https://www.linkedin.com/in/anjakr/, 
        Martin Kohnle: https://www.linkedin.com/in/martin-kohnle-504b2b1ba/, 
        Kieu Pham: https://www.linkedin.com/in/kieu-pham-5b6456223/}
-role: Neural Network + dataset, Postgres database, Vue.js + TypeScript frontend, Docker + CI/CD pipeline
+role: Neural Network + Dataset, Postgres Database, Vue.js + TypeScript Frontend, Docker + CI/CD Pipeline
 repo: {GitHub: https://github.com/MoritzKronberger/FLAI, Kaggle: https://www.kaggle.com/moritzkronberger/german-sign-language}
 ---
 

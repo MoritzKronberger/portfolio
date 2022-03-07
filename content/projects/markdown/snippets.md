@@ -12,7 +12,7 @@ tech: Vue.js, Express, PostgreSQL, Docker
 repo: {GitHub: https://github.com/MoritzKronberger/Snippets}
 team: {Lea Jell: https://www.linkedin.com/in/lea-jell-3a3b681b5/, 
        Martin Kohnle: https://www.linkedin.com/in/martin-kohnle-504b2b1ba/}
-role: Postgres database, Docker, Wireframing
+role: Postgres Database, Docker, Wireframing
 ---
 
 The full stack web application 'Snippets' allows its users to share short code snippets in a Twitter-like format. As with most social media platforms, users can interact with posts through likes and comments.
